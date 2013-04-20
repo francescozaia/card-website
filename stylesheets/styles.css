@@ -65,9 +65,10 @@ h1.title {
   margin: 1em 2em; }
 
 .main {
+  /* Acceptable values are border, content, and padding - content is the default W3C model */
+  box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
   padding: 3em 4em;
   position: fixed;
@@ -88,26 +89,23 @@ h1.title {
   border-radius: 0;
   background-color: rgba(0, 0, 0, 0.4); }
 
-#nav {
-  position: absolute;
-  width: 24%;
-  top: 2em;
-  left: 0; }
-  #nav ul {
+nav {
+  width: 24%; }
+  nav ul {
     display: inline-block;
     width: 100%;
     font-size: 120%;
     list-style: none;
     margin-left: 2em; }
-    #nav ul li {
+    nav ul li {
       display: block;
       width: 100%;
       margin: .6em; }
-  #nav ul.social {
+  nav ul.social {
     margin: 2em; }
-    #nav ul.social li {
+    nav ul.social li {
       display: inline; }
-  #nav a {
+  nav a {
     width: 100%;
     font-size: 1em;
     font-weight: 400;
@@ -115,13 +113,13 @@ h1.title {
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
 
-#nav .active a {
+nav .active a {
   font-weight: 700; }
 
-#nav li:first-child a {
+nav li:first-child a {
   border-top: 0; }
 
-#nav li:last-child a {
+nav li:last-child a {
   border-bottom: 0; }
 
 #toggle {
@@ -138,25 +136,24 @@ h1.title {
     margin: 10px; }
 
 @media screen and (max-width: 40em) {
-  .js #nav {
-    clip: rect(0 0 0 0);
-    max-height: 0;
-    position: absolute;
-    display: block;
-    overflow: hidden; }
-
-  #nav {
-    top: 0;
+  nav {
+    margin-top: -200px;
     width: 100%;
-    position: relative; }
+    background-color: #FF0;
+    z-index: 10;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out; }
 
-  #nav.opened {
-    max-height: 9999px; }
+  nav.opened {
+    opacity: 1;
+    margin-top: 0px; }
 
-  #nav a:hover {
+  nav a:hover {
     background: transparent; }
 
-  #nav .active a:hover {
+  nav .active a:hover {
     color: #fff;
     background: rgba(0, 0, 0, 0.3); }
 
@@ -166,14 +163,7 @@ h1.title {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    display: block;
-    width: 70px;
-    height: 55px;
-    float: right;
-    margin: 0 -2em 1em 0;
-    text-indent: -9999px;
-    overflow: hidden;
-    background: black url("../images/hamburger.gif") no-repeat 50% 33%; }
+    display: block; }
 
   .main {
     -webkit-overflow-scrolling: auto;
@@ -193,10 +183,3 @@ h1.title {
     -moz-background-size: 100px 100px;
     -o-background-size: 100px 100px;
     background-size: 100px 100px; } }
-@media screen and (min-width: 76em) {
-  #nav {
-    width: 18em; }
-
-  .main {
-    width: auto;
-    left: 18em; } }
