@@ -56,7 +56,9 @@ article ul li[itemprop=photography] img { width: 100%; float: left; }
 article ul li[itemprop=photography] [itemprop=name] { color: #fff; text-shadow: 0 0 4px #000; font-size: 1.4em; position: absolute; text-align: center; width: 100%; bottom: 0; left: 0; line-height: 2; display: block; }
 article ul li[itemprop=photography] [itemprop=description] { color: #8c8b90; font-family: Arial; font-size: .8em; margin-left: 165px; padding: 0 10px; }
 
-@media only screen and (max-width: 30em) { header { text-align: center; }
+@media only screen and (max-width: 60em) { article ul li[itemprop=photography] { width: 84%; margin: 6px 10px; }
+  article ul li[itemprop=photography] [itemprop=name] { font-size: 180%; } }
+@media screen and (max-width: 30em) { header { text-align: center; }
   .toggleButton { font-size: 2em; text-align: left; display: inline; float: left; cursor: pointer; }
   i { font-size: 2em; }
   nav { position: fixed; z-index: 1; }
@@ -64,10 +66,8 @@ article ul li[itemprop=photography] [itemprop=description] { color: #8c8b90; fon
   nav ul.social li { display: inline-block; }
   section { -webkit-box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3); -moz-box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3); box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3); position: absolute; background-color: #FFF; top: 0; left: 0; width: 100%; overflow: hidden; z-index: 10; transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; }
   section.opened { margin-left: 120px; }
-  li[itemprop=photography] { width: 100%; margin: 10px 0; }
-  li[itemprop=photography] [itemprop=name] { font-size: 180%; } }
+  article ul li[itemprop=photography] { width: 100%; margin: 10px 0; }
+  article ul li[itemprop=photography] [itemprop=name] { font-size: 180%; } }
 @media screen and (min-width: 30em) { .main { position: fixed; }
   .toggleButton { display: none; }
   section { width: 75%; display: inline-block; } }
-@media only screen and (max-width: 60em) { li[itemprop=photography] { width: 84%; margin: 6px 10px; }
-  li[itemprop=photography] [itemprop=name] { font-size: 180%; } }
