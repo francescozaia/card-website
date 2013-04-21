@@ -1,312 +1,73 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/* http://meyerweb.com/eric/tools/css/reset/  v2.0 | 20110126 License: none (public domain)
 */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 
-body {
-  line-height: 1; }
+body { line-height: 1; }
 
-ol, ul {
-  list-style: none; }
+ol, ul { list-style: none; }
 
-blockquote, q {
-  quotes: none; }
+blockquote, q { quotes: none; }
 
-blockquote:before, blockquote:after {
-  content: '';
-  content: none; }
+blockquote:before, blockquote:after { content: ''; content: none; }
 
-q:before, q:after {
-  content: '';
-  content: none; }
+q:before, q:after { content: ''; content: none; }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+table { border-collapse: collapse; border-spacing: 0; }
 
-html, body {
-  min-height: 100%; }
+body { overflow-x: hidden; font: normal 62.5%/1.5 'Droid Sans', sans-serif; color: #666; }
 
-body {
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  color: #666;
-  font: normal 62.5%/1.5 'Droid Sans', sans-serif;
-  overflow-x: hidden; }
+/* headings */
+h1, h2, h3 { font-weight: bold; }
 
-h1 {
-  font-size: 2em;
-  font-weight: bold; }
+h1 { font-size: 2em; }
 
-p {
-  float: left;
-  width: 100%;
-  margin-bottom: 1em; }
+h2 { font-size: 1.6em; }
 
-a {
-  transition: color 0.3s ease;
-  -moz-transition: color 0.3s ease;
-  -webkit-transition: color 0.3s ease;
-  color: #000;
-  text-decoration: none; }
+h3 { font-size: 1.2em; }
 
-a:active,
-a:hover {
-  color: #666;
-  outline: 0; }
+/* anchors */
+a { transition: color 0.3s ease; -moz-transition: color 0.3s ease; -webkit-transition: color 0.3s ease; text-decoration: none; color: #000; }
+a:hover, a:active { color: #666; }
 
-.cf:before,
-.cf:after {
-  content: "";
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0; }
+/* clearfix [TODO: is needed?] */
+.cf:before, .cf:after { content: ""; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
 
-.cf:after {
-  clear: both; }
+/* NAVIGATION */
+nav { display: inline-block; vertical-align: top; width: 24%; /* [TODO: why 25% breaks layout?] */ }
+nav ul { font-size: 1.2em; margin: 2em; }
+nav ul li { margin: .6em; }
+nav ul li a { font-weight: 400; }
+nav ul li .active a { font-weight: 700; }
+nav ul.social { margin: 2em; }
+nav ul.social li { display: inline; }
 
-article ul {
-  text-align: center; }
+/* [TODO --> clean from here and below] */
+header { padding: 1em 2em; background-color: #FFF; }
 
-.main {
-  /* Acceptable values are border, content, and padding - content is the default W3C model */
-  webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-overflow-scrolling: touch;
-  overflow: hidden;
-  overflow-y: scroll;
-  display: inline-block;
-  width: 76%; }
+article { padding: 1em; }
+article ul { text-align: center; }
+article ul li[itemprop=photography] { background: #fff; width: 40%; position: relative; display: inline-block; }
+article ul li[itemprop=photography] img { width: 100%; float: left; }
+article ul li[itemprop=photography] [itemprop=name] { color: #fff; text-shadow: 0 0 4px #000; font-size: 1.4em; position: absolute; text-align: center; width: 100%; bottom: 0; left: 0; line-height: 2; display: block; }
+article ul li[itemprop=photography] [itemprop=description] { color: #8c8b90; font-family: Arial; font-size: .8em; margin-left: 165px; padding: 0 10px; }
 
-header {
-  padding: 1em 2em;
-  background-color: #FFF;
-  text-align: center; }
-
-nav {
-  vertical-align: top;
-  height: 100%;
-  width: 24%;
-  display: inline-block; }
-  nav ul {
-    display: inline-block;
-    width: 100%;
-    font-size: 120%;
-    list-style: none;
-    margin: 2em; }
-    nav ul li {
-      display: inline-block;
-      width: 100%;
-      margin: .6em; }
-  nav ul.social {
-    margin: 2em; }
-    nav ul.social li {
-      display: inline; }
-  nav a {
-    width: 100%;
-    font-size: 1em;
-    font-weight: 400;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
-
-nav .active a {
-  font-weight: 700; }
-
-nav li:first-child a {
-  border-top: 0; }
-
-nav li:last-child a {
-  border-bottom: 0; }
-
-.gallery {
-  width: 100%;
-  clear: left;
-  overflow-x: scroll; }
-  .gallery .gallerySlider {
-    position: relative; }
-  .gallery img {
-    display: inline-block;
-    margin: 10px; }
-
-@media screen and (min-width: 40em) {
-  .main {
-    position: fixed; }
-
-  .toggleButton {
-    display: none; }
-
-  section {
-    width: 75%;
-    display: inline-block; } }
-@media screen and (max-width: 40em) {
-  .toggleButton {
-    font-size: 2em;
-    text-align: left;
-    display: inline;
-    float: left; }
-
-  i {
-    font-size: 2em; }
-
-  nav {
-    position: fixed;
-    z-index: 1; }
-    nav a {
-      font-size: 1.4em; }
-    nav ul.social li {
-      display: inline-block; }
-
-  nav a:hover {
-    background: transparent; }
-
-  #toggle {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    display: block; }
-
-  section {
-    -webkit-box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3);
-    box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3);
-    position: absolute;
-    background-color: #FFF;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    z-index: 10;
-    transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out; }
-
-  section.opened {
-    margin-left: 120px; }
-
-  .main {
-    -webkit-overflow-scrolling: auto;
-    box-shadow: none;
-    border-radius: 0;
-    width: 100%;
-    overflow: hidden; }
-
-  .main::-webkit-scrollbar {
-    background-color: transparent; } }
-h3 {
-  position: relative;
-  text-transform: uppercase;
-  font-family: Veneer;
-  font-size: 220%;
-  text-align: left;
-  color: #ff4e04;
-  margin: 30px 20px; }
-
-h3 em {
-  color: #c9450d; }
-
-#band, #location, #tickets, #subscribe {
-  width: 90%;
-  max-width: 1000px;
-  text-align: center;
-  margin: 0 auto; }
-
-#band {
-  margin-top: -400px; }
-
-li[itemprop=photography] {
-  background: #fff;
-  width: 30%;
-  position: relative;
-  display: inline-block;
-  height: 30%;
-  margin: 6px; }
-
-li[itemprop=photography] img {
-  width: 100%;
-  -webkit-backface-visibility: hidden;
-  -webkit-filter: sepia(50%) grayscale(60%);
-  -moz-filter: sepia(50%) grayscale(60%);
-  filter: sepia(50%) grayscale(60%);
-  -webkit-transition: all .3s ease-in;
-  -moz-transition: all .3s ease-in;
-  -o-transition: all .3s ease-in;
-  transition: all .3s ease-in;
-  float: left; }
-
-li[itemprop=photography] [itemprop=name] {
-  color: #fff;
-  font-family: ThirstyRough;
-  text-shadow: 0 0 4px #000;
-  font-size: 160%;
-  font-weight: 100;
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  line-height: 2;
-  display: block; }
-
-.no-textshadow li[itemprop=photography] [itemprop=name] {
-  background: #4E4E4E;
-  opacity: .7;
-  line-height: 1.5; }
-
-li[itemprop=photography]:hover img {
-  -webkit-filter: none;
-  -moz-filter: none;
-  filter: none; }
-
-li[itemprop=photography] [itemprop=description] {
-  display: none;
-  color: #8c8b90;
-  font-family: Arial;
-  font-size: .8em;
-  margin-left: 165px;
-  padding: 0 10px; }
-
-@media only screen and (max-width: 25em) {
-  #band, #location, #tickets, #subscribe {
-    width: 95%; }
-
-  li[itemprop=photography] {
-    width: 64%;
-    margin: 6px 10px; }
-
-  li[itemprop=photography] [itemprop=name] {
-    font-size: 180%; } }
-@media only screen and (max-width: 43em) {
-  h3 {
-    text-align: center; }
-
-  #band, #location, #tickets, #subscribe {
-    width: 98%; }
-
-  #band {
-    margin-top: -350px; }
-
-  li[itemprop=photography] {
-    width: 84%;
-    margin: 6px 10px; }
-
-  li[itemprop=photography] [itemprop=name] {
-    font-size: 180%; } }
+@media only screen and (max-width: 30em) { header { text-align: center; }
+  .toggleButton { font-size: 2em; text-align: left; display: inline; float: left; cursor: pointer; }
+  i { font-size: 2em; }
+  nav { position: fixed; z-index: 1; }
+  nav a { font-size: 1.4em; }
+  nav ul.social li { display: inline-block; }
+  section { -webkit-box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3); -moz-box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3); box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3); position: absolute; background-color: #FFF; top: 0; left: 0; width: 100%; overflow: hidden; z-index: 10; transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; }
+  section.opened { margin-left: 120px; }
+  li[itemprop=photography] { width: 100%; margin: 10px 0; }
+  li[itemprop=photography] [itemprop=name] { font-size: 180%; } }
+@media screen and (min-width: 30em) { .main { position: fixed; }
+  .toggleButton { display: none; }
+  section { width: 75%; display: inline-block; } }
+@media only screen and (max-width: 60em) { li[itemprop=photography] { width: 84%; margin: 6px 10px; }
+  li[itemprop=photography] [itemprop=name] { font-size: 180%; } }

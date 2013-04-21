@@ -1,1 +1,1 @@
-sass --watch ./stylesheets/sass/styles.scss:./stylesheets/styles.css
+sass --watch ./stylesheets/sass/styles.scss:./stylesheets/styles.css --style compact

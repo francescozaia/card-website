@@ -1,151 +1,119 @@
 @import "reset";
 @import "mixins";
 
-
-html, body {
-	min-height: 100%;
-}
-
 body {
-	-webkit-font-smoothing: antialiased;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-	text-size-adjust: 100%;
-	color: #666;
-	font: normal 62.5%/1.5 'Droid Sans', sans-serif;
 	overflow-x: hidden;
-
+	font: normal 62.5%/1.5 'Droid Sans', sans-serif;
+	color: #666;
 }
-
-h1 {
-	font-size: 2em;
+/* headings */
+h1, h2, h3 {
 	font-weight: bold;
 }
-
-p {
-	float: left;
-	width: 100%;
-	margin-bottom: 1em;
+h1 {
+	font-size: 2em;
 }
+h2 {
+	font-size: 1.6em;
+}
+h3 {
+	font-size: 1.2em;
+}
+/* anchors */
 
 a {
 	@include sass-transition(color, .3s, ease);
-	color: #000;
 	text-decoration: none;
+	color: #000;
+	&:hover, &:active {
+		color: #666;
+	}
 }
-a:active,
-a:hover {
-	color: #666;
-	outline: 0;
-}
-
-.cf:before,
-.cf:after {
-	content:"";
-	display:block;
-	overflow:hidden;
-	visibility:hidden;
-	width:0;
-	height:0;
-}
-.cf:after {
-	clear:both;
+/* clearfix [TODO: is needed?] */
+.cf {
+	@include sass-clearfix;
 }
 
-article ul {
-	text-align:center;
-}
-
-
-
-.main {
-	@include sass-box-sizing("border");
-	-webkit-overflow-scrolling: touch;
-	overflow: hidden;
-	overflow-y: scroll;
-	display:inline-block;
-	width: 76%;
-}
-header {
-	padding: 1em 2em;
-	background-color: #FFF;
-	text-align: center;
-}
+/* NAVIGATION */
 nav {
-	vertical-align: top;
-	height: 100%;
-	width: 24%;
 	display:inline-block;
+	vertical-align: top;
+	width: 24%; /* [TODO: why 25% breaks layout?] */
 	ul {
-		display: inline-block;
-		width: 100%;
-		font-size: 120%;
-		list-style: none;
+		font-size: 1.2em;
 		margin: 2em;
-
 		li {
-			display: inline-block;
-			width: 100%;
 			margin: .6em;
+			a {
+				font-weight: 400;
+			}
+			.active a {
+				font-weight: 700
+			}
 		}
 	}
-	
 	ul.social {
 		margin: 2em;
-
 		li {
 			display: inline;
 		}
 	}
+}
+
+
+/* [TODO --> clean from here and below] */
+header {
+	padding: 1em 2em;
+	background-color: #FFF;
+}
+
+article {
+	padding: 1em;
+	ul {
+		text-align:center;
+		li[itemprop=photography] {
+			background:#fff;
+			width:40%;
+			position:relative;
+			display:inline-block;
+		}
+		li[itemprop=photography] img {
+			width:100%;
+			float:left;
+		}
+		li[itemprop=photography] [itemprop=name] {
+			color:#fff;
+			text-shadow:0 0 4px #000;
+			font-size:1.4em;
+			position:absolute;
+			text-align:center;
+			width:100%;
+			bottom:0;
+			left:0;
+			line-height:2;
+			display:block;
+		}
+		li[itemprop=photography] [itemprop=description] {
+			color:#8c8b90;
+			font-family:Arial;
+			font-size:.8em;
+			margin-left:165px;
+			padding:0 10px;
+		}
+	}
+}
+
+@media only screen and (max-width: 30em) {
 	
-	a {
-		width: 100%;
-		font-size: 1em;
-		font-weight: 400;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
+	header {
+		text-align: center;
 	}
-}
-
-nav .active a { font-weight: 700 }
-nav li:first-child a { border-top: 0 }
-nav li:last-child a { border-bottom: 0 }
-
-
-
-.gallery {
-	width:100%;
-	clear:left;
-	overflow-x: scroll;
-
-	.gallerySlider {
-		position:relative;
-	}
-
-	img {
-		display:inline-block;
-		margin: 10px;
-	}
-}
-@media screen and (min-width: 40em) {
-	.main {
-		position: fixed;
-	}
-	.toggleButton {
-		display: none;
-	}
-	section {
-	width: 75%;
-	display: inline-block;
-	}
-}
-@media screen and (max-width: 40em) {
 	.toggleButton {
 		font-size: 2em;
 		text-align: left;
 		display: inline;
 		float: left;
+		cursor: pointer;
 	}
 	i {
 		font-size: 2em;
@@ -159,15 +127,6 @@ nav li:last-child a { border-bottom: 0 }
 		ul.social li {
 			display: inline-block;
 		}
-	}
-	nav a:hover { background: transparent }
-	#toggle {
-		-webkit-touch-callout: none;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-		display: block;
 	}
 	section {
 		@include sass-box-shadow(-3px, 0px, 16px, rgba(0, 0, 0, 0.3));
@@ -183,118 +142,9 @@ nav li:last-child a { border-bottom: 0 }
 	section.opened {
 		margin-left: 120px;
 	}
-	.main {
-		-webkit-overflow-scrolling: auto;
-		box-shadow: none;
-		border-radius: 0;
-		width: 100%;
-		overflow: hidden;
-	}
-	.main::-webkit-scrollbar { background-color: transparent }
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 1.3), screen and (min--moz-device-pixel-ratio: 1.3), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-device-pixel-ratio: 1.3), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-	// retina
-}
-
-
-
-
-h3 {
-position:relative;
-text-transform:uppercase;
-font-family:Veneer;
-font-size:220%;
-text-align:left;
-color:#ff4e04;
-margin:30px 20px;
-}
-
-h3 em {
-color:#c9450d;
-}
-
-#band,#location,#tickets,#subscribe {
-width:90%;
-max-width:1000px;
-text-align:center;
-margin:0 auto;
-}
-
-
-#band {
-margin-top:-400px;
-}
-
-li[itemprop=photography] {
-background:#fff;
-width:30%;
-position:relative;
-display:inline-block;
-height:30%;
-margin:6px;
-}
-
-li[itemprop=photography] img {
-width:100%;
--webkit-backface-visibility:hidden;
--webkit-filter:sepia(50%) grayscale(60%);
--moz-filter:sepia(50%) grayscale(60%);
-filter:sepia(50%) grayscale(60%);
--webkit-transition:all .3s ease-in;
--moz-transition:all .3s ease-in;
--o-transition:all .3s ease-in;
-transition:all .3s ease-in;
-float:left;
-}
-
-li[itemprop=photography] [itemprop=name] {
-color:#fff;
-font-family:ThirstyRough;
-text-shadow:0 0 4px #000;
-font-size:160%;
-font-weight:100;
-position:absolute;
-text-align:center;
-width:100%;
-bottom:0;
-left:0;
-line-height:2;
-display:block;
-}
-
-.no-textshadow li[itemprop=photography] [itemprop=name] {
-background:#4E4E4E;
-opacity:.7;
-line-height:1.5;
-}
-
-li[itemprop=photography]:hover img {
--webkit-filter:none;
--moz-filter:none;
-filter:none;
-}
-
-li[itemprop=photography] [itemprop=description] {
-display:none;
-color:#8c8b90;
-font-family:Arial;
-font-size:.8em;
-margin-left:165px;
-padding:0 10px;
-}
-
-
-@media only screen and (max-width: 25em){
-
-
-	#band,#location,#tickets,#subscribe {
-	width:95%;
-	}
-
 	li[itemprop=photography] {
-	width:64%;
-	margin:6px 10px;
+	width:100%;
+	margin:10px 0;
 	}
 
 	li[itemprop=photography] [itemprop=name] {
@@ -302,21 +152,20 @@ padding:0 10px;
 	}
 }
 
-@media only screen and (max-width: 43em) {
-
-
-	h3 {
-	text-align:center;
+@media screen and (min-width: 30em) {
+	.main {
+		position: fixed;
 	}
-
-	#band,#location,#tickets,#subscribe {
-	width:98%;
+	.toggleButton {
+		display: none;
 	}
-
-	#band {
-	margin-top:-350px;
+	section {
+		width: 75%;
+		display: inline-block;
 	}
+}
 
+@media only screen and (max-width: 60em) {
 	li[itemprop=photography] {
 	width:84%;
 	margin:6px 10px;
@@ -325,4 +174,8 @@ padding:0 10px;
 	li[itemprop=photography] [itemprop=name] {
 	font-size:180%;
 	}
+}
+// [TODO retina]
+@media screen and (-webkit-min-device-pixel-ratio: 1.3), screen and (min--moz-device-pixel-ratio: 1.3), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-device-pixel-ratio: 1.3), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+	
 }
