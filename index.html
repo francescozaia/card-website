@@ -9,14 +9,14 @@
 		<link rel="stylesheet" href="./stylesheets/font-awesome.min.css">
 	</head>
 	<body>
-		<h1 class="title cf"> francesco zaia </h1>
-		<a href="#nav" id="toggle"><i class="icon-align-justify"></i></a>
+		
+		
 		<nav>
 			<ul class="menu">
-				<li class="active"><a href="#"><i class="icon-folder-open-alt"></i> home</a></li>
-				<li><a href="./index.html#prototype1"><i class="icon-folder-close-alt"></i> about</a></li>
-				<li><a href="#prototype2"><i class="icon-folder-close-alt"></i> projects</a></li>
-				<li><a href="#prototype3"><i class="icon-folder-close-alt"></i> blog</a></li>
+				<li class="active"><a href="#">home</a></li>
+				<li><a href="#prototype1">about</a></li>
+				<li><a href="#prototype2">projects</a></li>
+				<li><a href="#prototype3">blog</a></li>
 			</ul>
 
 			<ul class="social">
@@ -26,28 +26,60 @@
 				<li><a href="#"><i class="icon-facebook"></i></a></li>
 			</ul>
 		</nav>
+
+	
 		
-		<section role="main" class="main">
-			<article>
-				<h1 id="prototype1">Prototype 1</h1>
+		<section role="main">
+			<header>
+				<a href="#nav" class="toggleButton">menu</a>
+				<h1 class="cf">francesco zaia</h1>
+			</header>
+			<!--<article>
+				<h2 id="prototype1">Prototype 1</h2>
 				<p class="intro cf">Despite the apparent simplicity, there are many underlying factors which, when thought out and implemented properly, can make that simple solution even better without adding more complexity to the user&nbsp;interface.</p>
 				<div class="gallery" class="cf"></div>
-			</article>
+			</article>-->
 			<article>
-				<h1 id="prototype2">Prototype 2</h1>
+				<h2 id="prototype2">Prototype 2</h2>
+				<p class="intro cf">Despite the apparent simplicity, there are many underlying factors which, when thought out and implemented properly, can make that simple solution even better without adding more complexity to the user&nbsp;interface.</p>
+				<ul>
+					<li itemprop="photography">
+						<img src="http://24.media.tumblr.com/73df2ab210d3ef60be5ff79c4b374304/tumblr_mi8gh5oTb61qzmntao1_500.jpg" alt="" itemprop="image">
+						<span itemprop="name">Test Title</span>
+						<span itemprop="description"></span>
+					</li>
+					<li itemprop="photography">
+						<img src="http://24.media.tumblr.com/062e56d6f384b7360ce5fe3cb39db7b8/tumblr_mi8ggtUAri1qzmntao1_500.jpg" alt="" itemprop="image">
+						<span itemprop="name">Test Title</span>
+						<span itemprop="description"></span>
+					</li>
+					<li itemprop="photography">
+						<img src="http://25.media.tumblr.com/66cfcc19364de87932497734d4b63311/tumblr_mgqd8w0qhV1qzmntao1_500.jpg" alt="" itemprop="image">
+						<span itemprop="name">Test Title</span>
+						<span itemprop="description"></span>
+					</li>
+					<li itemprop="photography">
+						<img src="http://24.media.tumblr.com/73df2ab210d3ef60be5ff79c4b374304/tumblr_mi8gh5oTb61qzmntao1_500.jpg" alt="" itemprop="image">
+						<span itemprop="name">Test Title</span>
+						<span itemprop="description"></span>
+					</li>
+					<li itemprop="photography">
+						<img src="http://24.media.tumblr.com/062e56d6f384b7360ce5fe3cb39db7b8/tumblr_mi8ggtUAri1qzmntao1_500.jpg" alt="" itemprop="image">
+						<span itemprop="name">Test Title</span>
+						<span itemprop="description"></span>
+					</li>
+				</ul>
+			</article>
+			<!--<article>
+				<h2 id="prototype3" name="prototype3">Prototype 3</h2>
 				<p class="intro cf">Despite the apparent simplicity, there are many underlying factors which, when thought out and implemented properly, can make that simple solution even better without adding more complexity to the user&nbsp;interface.</p>
 				<div style="height:400px; background-color:green" class="cf"></div>
-			</article>
-			<article>
-				<h1 id="prototype3" name="prototype3">Prototype 3</h1>
-				<p class="intro cf">Despite the apparent simplicity, there are many underlying factors which, when thought out and implemented properly, can make that simple solution even better without adding more complexity to the user&nbsp;interface.</p>
-				<div style="height:400px; background-color:green" class="cf"></div>
-			</article>
+			</article>-->
 		</section>
 
 		<script type="text/javascript" src="./scripts/requestAnimationFrame.js"></script>
 		<script type="text/javascript" src="https://raw.github.com/ftlabs/dom-delegate/master/lib/delegate.js"></script>
-		<script type="text/javascript" src="./scripts/imagePreloader.js"></script>
+		<!--<script type="text/javascript" src="./scripts/imagePreloader.js"></script>-->
 		<script type="text/javascript" src="./scripts/main.js"></script>
 	</body>
 </html>

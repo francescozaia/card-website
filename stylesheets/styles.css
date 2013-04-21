@@ -1,36 +1,55 @@
-body, div,
-h1, h2, p,
-ol, ul, li {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
-  border: 0; }
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
 
-@-webkit-viewport {
-  width: device-width; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
 
-@-moz-viewport {
-  width: device-width; }
+body {
+  line-height: 1; }
 
-@-ms-viewport {
-  width: device-width; }
+ol, ul {
+  list-style: none; }
 
-@-o-viewport {
-  width: device-width; }
+blockquote, q {
+  quotes: none; }
 
-@viewport {
-  width: device-width; }
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 html, body {
   min-height: 100%; }
 
 body {
-  min-width: 290px;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
   color: #666;
-  font: normal 62.5%/1.5 'Droid Sans', sans-serif; }
+  font: normal 62.5%/1.5 'Droid Sans', sans-serif;
+  overflow-x: hidden; }
+
+h1 {
+  font-size: 2em;
+  font-weight: bold; }
 
 p {
   float: left;
@@ -61,44 +80,38 @@ a:hover {
 .cf:after {
   clear: both; }
 
-h1.title {
-  margin: 1em 2em; }
+article ul {
+  text-align: center; }
 
 .main {
   /* Acceptable values are border, content, and padding - content is the default W3C model */
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+  webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-overflow-scrolling: touch;
-  padding: 3em 4em;
-  position: fixed;
   overflow: hidden;
   overflow-y: scroll;
-  top: .8em;
-  right: 0;
-  bottom: 0;
+  display: inline-block;
   width: 76%; }
 
-.main::-webkit-scrollbar {
-  -webkit-appearance: none;
-  background-color: rgba(0, 0, 0, 0.15);
-  width: 8px;
-  height: 8px; }
-
-.main::-webkit-scrollbar-thumb {
-  border-radius: 0;
-  background-color: rgba(0, 0, 0, 0.4); }
+header {
+  padding: 1em 2em;
+  background-color: #FFF;
+  text-align: center; }
 
 nav {
-  width: 24%; }
+  vertical-align: top;
+  height: 100%;
+  width: 24%;
+  display: inline-block; }
   nav ul {
     display: inline-block;
     width: 100%;
     font-size: 120%;
     list-style: none;
-    margin-left: 2em; }
+    margin: 2em; }
     nav ul li {
-      display: block;
+      display: inline-block;
       width: 100%;
       margin: .6em; }
   nav ul.social {
@@ -122,9 +135,6 @@ nav li:first-child a {
 nav li:last-child a {
   border-bottom: 0; }
 
-#toggle {
-  display: none; }
-
 .gallery {
   width: 100%;
   clear: left;
@@ -135,27 +145,36 @@ nav li:last-child a {
     display: inline-block;
     margin: 10px; }
 
-@media screen and (max-width: 40em) {
-  nav {
-    margin-top: -200px;
-    width: 100%;
-    background-color: #FF0;
-    z-index: 10;
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out; }
+@media screen and (min-width: 40em) {
+  .main {
+    position: fixed; }
 
-  nav.opened {
-    opacity: 1;
-    margin-top: 0px; }
+  .toggleButton {
+    display: none; }
+
+  section {
+    width: 75%;
+    display: inline-block; } }
+@media screen and (max-width: 40em) {
+  .toggleButton {
+    font-size: 2em;
+    text-align: left;
+    display: inline;
+    float: left; }
+
+  i {
+    font-size: 2em; }
+
+  nav {
+    position: fixed;
+    z-index: 1; }
+    nav a {
+      font-size: 1.4em; }
+    nav ul.social li {
+      display: inline-block; }
 
   nav a:hover {
     background: transparent; }
-
-  nav .active a:hover {
-    color: #fff;
-    background: rgba(0, 0, 0, 0.3); }
 
   #toggle {
     -webkit-touch-callout: none;
@@ -165,21 +184,129 @@ nav li:last-child a {
     user-select: none;
     display: block; }
 
+  section {
+    -webkit-box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3);
+    box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    background-color: #FFF;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 10;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out; }
+
+  section.opened {
+    margin-left: 120px; }
+
   .main {
     -webkit-overflow-scrolling: auto;
     box-shadow: none;
-    padding: 0 2em 2em;
     border-radius: 0;
-    position: relative;
     width: 100%;
     overflow: hidden; }
 
   .main::-webkit-scrollbar {
     background-color: transparent; } }
-@media screen and (-webkit-min-device-pixel-ratio: 1.3), screen and (min--moz-device-pixel-ratio: 1.3), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-device-pixel-ratio: 1.3), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  #toggle {
-    background-image: url("../images/hamburger-retina.gif");
-    -webkit-background-size: 100px 100px;
-    -moz-background-size: 100px 100px;
-    -o-background-size: 100px 100px;
-    background-size: 100px 100px; } }
+h3 {
+  position: relative;
+  text-transform: uppercase;
+  font-family: Veneer;
+  font-size: 220%;
+  text-align: left;
+  color: #ff4e04;
+  margin: 30px 20px; }
+
+h3 em {
+  color: #c9450d; }
+
+#band, #location, #tickets, #subscribe {
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto; }
+
+#band {
+  margin-top: -400px; }
+
+li[itemprop=photography] {
+  background: #fff;
+  width: 30%;
+  position: relative;
+  display: inline-block;
+  height: 30%;
+  margin: 6px; }
+
+li[itemprop=photography] img {
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  -webkit-filter: sepia(50%) grayscale(60%);
+  -moz-filter: sepia(50%) grayscale(60%);
+  filter: sepia(50%) grayscale(60%);
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  float: left; }
+
+li[itemprop=photography] [itemprop=name] {
+  color: #fff;
+  font-family: ThirstyRough;
+  text-shadow: 0 0 4px #000;
+  font-size: 160%;
+  font-weight: 100;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  line-height: 2;
+  display: block; }
+
+.no-textshadow li[itemprop=photography] [itemprop=name] {
+  background: #4E4E4E;
+  opacity: .7;
+  line-height: 1.5; }
+
+li[itemprop=photography]:hover img {
+  -webkit-filter: none;
+  -moz-filter: none;
+  filter: none; }
+
+li[itemprop=photography] [itemprop=description] {
+  display: none;
+  color: #8c8b90;
+  font-family: Arial;
+  font-size: .8em;
+  margin-left: 165px;
+  padding: 0 10px; }
+
+@media only screen and (max-width: 25em) {
+  #band, #location, #tickets, #subscribe {
+    width: 95%; }
+
+  li[itemprop=photography] {
+    width: 64%;
+    margin: 6px 10px; }
+
+  li[itemprop=photography] [itemprop=name] {
+    font-size: 180%; } }
+@media only screen and (max-width: 43em) {
+  h3 {
+    text-align: center; }
+
+  #band, #location, #tickets, #subscribe {
+    width: 98%; }
+
+  #band {
+    margin-top: -350px; }
+
+  li[itemprop=photography] {
+    width: 84%;
+    margin: 6px 10px; }
+
+  li[itemprop=photography] [itemprop=name] {
+    font-size: 180%; } }

@@ -4,16 +4,17 @@
 
  	var init = function() {
 
-		ImagePreloader.moduleMethod("ole");
-		var photo = document.querySelector(".gallerySlider");
+		//ImagePreloader.moduleMethod("ole");
+		//var photo = document.querySelector(".gallerySlider");
 
         window.addEventListener('load', function() {
 			var m = new Delegate(document.body);
-			m.on("click", "#toggle", function(){
-				if(document.getElementsByTagName("nav")[0].className.split(" ").indexOf("opened") > -1) {
-					document.getElementsByTagName("nav")[0].className = "";
+			m.on("click", ".toggleButton", function(){
+				var element = document.getElementsByTagName("section")[0];
+				if(element.className.split(" ").indexOf("opened") > -1) {
+					element.className = "";
 				} else {
-					document.getElementsByTagName("nav")[0].className = "opened";
+					element.className = "opened";
 				}
 				
 			})
