@@ -17,7 +17,7 @@ q:before, q:after { content: ''; content: none; }
 
 table { border-collapse: collapse; border-spacing: 0; }
 
-body { overflow-x: hidden; font: normal 62.5%/1.5 'Droid Sans', sans-serif; color: #666; }
+body { overflow-x: hidden; font: normal 62.5%/1.5 'Lato', sans-serif; color: #666; }
 
 /* headings */
 h1, h2, h3 { font-weight: bold; }
@@ -39,35 +39,44 @@ a:hover, a:active { color: #666; }
 
 /* NAVIGATION */
 nav { display: inline-block; vertical-align: top; width: 24%; /* [TODO: why 25% breaks layout?] */ }
-nav ul { font-size: 1.2em; margin: 2em; }
+nav ul { font-size: 1.8em; margin: 1em; }
 nav ul li { margin: .6em; }
 nav ul li a { font-weight: 400; }
 nav ul li .active a { font-weight: 700; }
-nav ul.social { margin: 2em; }
-nav ul.social li { display: inline; }
+nav ul.social { margin-top: 2em; }
+nav ul.social li { line-height: 1em; font-size: 1.8em; }
 
-/* [TODO --> clean from here and below] */
-header { padding: 1em 2em; background-color: #FFF; }
+header { padding: 1em; background-color: #FFF; text-align: left; }
+header a:after { content: "|"; }
 
-article { padding: 1em; }
-article ul { text-align: center; }
-article ul li[itemprop=photography] { background: #fff; width: 40%; position: relative; display: inline-block; }
-article ul li[itemprop=photography] img { width: 100%; float: left; }
-article ul li[itemprop=photography] [itemprop=name] { color: #fff; text-shadow: 0 0 4px #000; font-size: 1.4em; position: absolute; text-align: center; width: 100%; bottom: 0; left: 0; line-height: 2; display: block; }
+article { padding: 1em; /*div {
+	width:100%;
+	overflow-x: scroll;
+	ul {
+		width:3000px;
+		li{
+			display: inline;
+			margin:6px 10px;
+		}
+	}
+}*/ }
+article ul { text-align: center; overflow: hidden; }
+article ul li[itemprop=photography] { background: #fff; width: 80%; margin: 6px 10px; position: relative; display: inline; float: left; }
+article ul li[itemprop=photography] img { width: 100%; }
+article ul li[itemprop=photography] [itemprop=name] { font-size: 180%; color: #fff; text-shadow: 0 0 4px #000; position: absolute; text-align: center; width: 100%; bottom: 0; left: 0; line-height: 2; display: block; }
 article ul li[itemprop=photography] [itemprop=description] { color: #8c8b90; font-family: Arial; font-size: .8em; margin-left: 165px; padding: 0 10px; }
 
-@media only screen and (max-width: 60em) { article ul li[itemprop=photography] { width: 84%; margin: 6px 10px; }
-  article ul li[itemprop=photography] [itemprop=name] { font-size: 180%; } }
-@media screen and (max-width: 30em) { header { text-align: center; }
-  .toggleButton { font-size: 2em; text-align: left; display: inline; float: left; cursor: pointer; }
-  i { font-size: 2em; }
+@media only screen and (min-width: 60em) { article ul li[itemprop=photography] { width: 40%; }
+  article ul li[itemprop=photography] [itemprop=name] { font-size: 1.4em; }
+  nav ul { font-size: 1.4em; margin: 2em; }
+  nav ul.social li { font-size: 1em; display: inline; margin: .6em .1em; } }
+@media screen and (max-width: 30em) { .toggleButton { font-size: 2em; text-align: left; display: inline; float: left; cursor: pointer; }
   nav { position: fixed; z-index: 1; }
-  nav a { font-size: 1.4em; }
-  nav ul.social li { display: inline-block; }
   section { -webkit-box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3); -moz-box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3); box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3); position: absolute; background-color: #FFF; top: 0; left: 0; width: 100%; overflow: hidden; z-index: 10; transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; }
   section.opened { margin-left: 120px; }
   article ul li[itemprop=photography] { width: 100%; margin: 10px 0; }
   article ul li[itemprop=photography] [itemprop=name] { font-size: 180%; } }
-@media screen and (min-width: 30em) { .main { position: fixed; }
+@media screen and (min-width: 30em) { header { text-align: left; }
+  .main { position: fixed; }
   .toggleButton { display: none; }
   section { width: 75%; display: inline-block; } }

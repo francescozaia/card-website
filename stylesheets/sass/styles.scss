@@ -3,7 +3,7 @@
 
 body {
 	overflow-x: hidden;
-	font: normal 62.5%/1.5 'Droid Sans', sans-serif;
+	font: normal 62.5%/1.5 'Lato', sans-serif;
 	color: #666;
 }
 /* headings */
@@ -40,51 +40,57 @@ nav {
 	vertical-align: top;
 	width: 24%; /* [TODO: why 25% breaks layout?] */
 	ul {
-		font-size: 1.2em;
-		margin: 2em;
+		font-size: 1.8em;
+		margin: 1em;
 		li {
 			margin: .6em;
 			a {
 				font-weight: 400;
 			}
 			.active a {
-				font-weight: 700
+				font-weight: 700;
 			}
 		}
 	}
 	ul.social {
-		margin: 2em;
+		margin-top: 2em;
 		li {
-			display: inline;
+			line-height: 1em;
+			font-size: 1.8em;
 		}
 	}
 }
 
-
-/* [TODO --> clean from here and below] */
 header {
-	padding: 1em 2em;
+	padding: 1em;
 	background-color: #FFF;
+	text-align: left;
+	a:after{
+		content:"|"; 
+	}
 }
 
 article {
 	padding: 1em;
 	ul {
 		text-align:center;
+		overflow: hidden;
 		li[itemprop=photography] {
 			background:#fff;
-			width:40%;
+			width:80%;
+			margin:6px 10px;
 			position:relative;
-			display:inline-block;
+			display:inline;
+			float:left;
 		}
 		li[itemprop=photography] img {
 			width:100%;
-			float:left;
 		}
 		li[itemprop=photography] [itemprop=name] {
+			font-size:180%;
 			color:#fff;
 			text-shadow:0 0 4px #000;
-			font-size:1.4em;
+			
 			position:absolute;
 			text-align:center;
 			width:100%;
@@ -101,23 +107,47 @@ article {
 			padding:0 10px;
 		}
 	}
+	/*div {
+		width:100%;
+		overflow-x: scroll;
+		ul {
+			width:3000px;
+			li{
+				display: inline;
+				margin:6px 10px;
+			}
+		}
+	}*/
 }
-@media only screen and (max-width: 60em) {
+
+@media only screen and (min-width: 60em) {
 	article ul li[itemprop=photography] {
-		width:84%;
-		margin:6px 10px;
+		width:40%;
+		
 	}
 
 	article ul li[itemprop=photography] [itemprop=name] {
-		font-size:180%;
+		font-size:1.4em;
 	}
+
+	nav {
+		ul {
+			font-size: 1.4em;
+			margin: 2em;
+		}
+		ul.social {
+			li {
+				font-size: 1em;
+				display: inline;
+				margin: .6em .1em;
+			}
+		}
+	}
+	
 }
 
 @media screen and (max-width: 30em) {
-	
-	header {
-		text-align: center;
-	}
+
 	.toggleButton {
 		font-size: 2em;
 		text-align: left;
@@ -125,18 +155,11 @@ article {
 		float: left;
 		cursor: pointer;
 	}
-	i {
-		font-size: 2em;
-	}
+	
 	nav {
 		position: fixed;
 		z-index: 1;
-		a {
-			font-size: 1.4em;
-		}
-		ul.social li {
-			display: inline-block;
-		}
+		
 	}
 	section {
 		@include sass-box-shadow(-3px, 0px, 16px, rgba(0, 0, 0, 0.3));
@@ -163,6 +186,9 @@ article {
 }
 
 @media screen and (min-width: 30em) {
+	header {
+		text-align: left;
+	}
 	.main {
 		position: fixed;
 	}
@@ -173,6 +199,7 @@ article {
 		width: 75%;
 		display: inline-block;
 	}
+	
 }
 
 
