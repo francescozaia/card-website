@@ -49,33 +49,19 @@ nav ul.social li { line-height: 1em; font-size: 1.8em; }
 header { padding: 1em; background-color: #FFF; text-align: left; }
 header a:after { content: "|"; }
 
-article { padding: 1em; /*div {
-	width:100%;
-	overflow-x: scroll;
-	ul {
-		width:3000px;
-		li{
-			display: inline;
-			margin:6px 10px;
-		}
-	}
-}*/ }
-article ul { text-align: center; overflow: hidden; }
-article ul li[itemprop=photography] { background: #fff; width: 80%; margin: 6px 10px; position: relative; display: inline; float: left; }
-article ul li[itemprop=photography] img { width: 100%; }
-article ul li[itemprop=photography] [itemprop=name] { font-size: 180%; color: #fff; text-shadow: 0 0 4px #000; position: absolute; text-align: center; width: 100%; bottom: 0; left: 0; line-height: 2; display: block; }
-article ul li[itemprop=photography] [itemprop=description] { color: #8c8b90; font-family: Arial; font-size: .8em; margin-left: 165px; padding: 0 10px; }
+article { padding: 1em; }
+article ul li[itemprop=photography] figcaption { text-align: center; width: 100%; display: block; }
+article ul li[itemprop=photography] figcaption [itemprop=description] { color: #F00; }
+article div { width: 100%; overflow-x: scroll; }
+article div ul { list-style-type: none; display: block; margin: 0; padding: 0; width: auto; white-space: nowrap; }
+article div ul li[itemprop=photography] { display: inline-block; margin: 6px 10px; }
 
-@media only screen and (min-width: 60em) { article ul li[itemprop=photography] { width: 40%; }
-  article ul li[itemprop=photography] [itemprop=name] { font-size: 1.4em; }
-  nav ul { font-size: 1.4em; margin: 2em; }
+@media only screen and (min-width: 60em) { nav ul { font-size: 1.4em; margin: 2em; }
   nav ul.social li { font-size: 1em; display: inline; margin: .6em .1em; } }
 @media screen and (max-width: 30em) { .toggleButton { font-size: 2em; text-align: left; display: inline; float: left; cursor: pointer; }
   nav { position: fixed; z-index: 1; }
   section { -webkit-box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3); -moz-box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3); box-shadow: -3px 0px 16px rgba(0, 0, 0, 0.3); position: absolute; background-color: #FFF; top: 0; left: 0; width: 100%; overflow: hidden; z-index: 10; transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; }
-  section.opened { margin-left: 120px; }
-  article ul li[itemprop=photography] { width: 100%; margin: 10px 0; }
-  article ul li[itemprop=photography] [itemprop=name] { font-size: 180%; } }
+  section.opened { margin-left: 120px; } }
 @media screen and (min-width: 30em) { header { text-align: left; }
   .main { position: fixed; }
   .toggleButton { display: none; }

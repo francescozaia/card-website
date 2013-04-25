@@ -73,62 +73,39 @@ header {
 article {
 	padding: 1em;
 	ul {
-		text-align:center;
-		overflow: hidden;
-		li[itemprop=photography] {
-			background:#fff;
-			width:80%;
-			margin:6px 10px;
-			position:relative;
-			display:inline;
-			float:left;
-		}
-		li[itemprop=photography] img {
-			width:100%;
-		}
-		li[itemprop=photography] [itemprop=name] {
-			font-size:180%;
-			color:#fff;
-			text-shadow:0 0 4px #000;
-			
-			position:absolute;
+		
+		li[itemprop=photography] figcaption {
 			text-align:center;
 			width:100%;
-			bottom:0;
-			left:0;
-			line-height:2;
 			display:block;
-		}
-		li[itemprop=photography] [itemprop=description] {
-			color:#8c8b90;
-			font-family:Arial;
-			font-size:.8em;
-			margin-left:165px;
-			padding:0 10px;
+			[itemprop=description]{
+				color:#F00;
+			}
 		}
 	}
-	/*div {
+	div {
 		width:100%;
 		overflow-x: scroll;
 		ul {
-			width:3000px;
-			li{
-				display: inline;
+			list-style-type:none;
+			display:block;
+			margin:0;
+			padding:0;
+			width:auto;
+			white-space:nowrap;
+			li[itemprop=photography] {
+				display: inline-block;
 				margin:6px 10px;
+				[itemprop=description] {
+
+				}
 			}
 		}
-	}*/
+	}
 }
 
 @media only screen and (min-width: 60em) {
-	article ul li[itemprop=photography] {
-		width:40%;
-		
-	}
 
-	article ul li[itemprop=photography] [itemprop=name] {
-		font-size:1.4em;
-	}
 
 	nav {
 		ul {
@@ -175,14 +152,7 @@ article {
 	section.opened {
 		margin-left: 120px;
 	}
-	article ul li[itemprop=photography] {
-		width:100%;
-		margin:10px 0;
-	}
 
-	article ul li[itemprop=photography] [itemprop=name] {
-		font-size:180%;
-	}
 }
 
 @media screen and (min-width: 30em) {
