@@ -2,178 +2,200 @@
 @import "mixins";
 
 body {
-	overflow-x: hidden;
-	font: normal 62.5%/1.5 'Lato', sans-serif;
-	color: #666;
+  overflow-x: hidden;
+  font: normal 62.5%/1.5 'Lato', sans-serif;
+  color: #666;
 }
 /* headings */
 h1, h2, h3 {
-	font-weight: bold;
+  font-weight: bold;
 }
 h1 {
-	font-size: 2em;
+  font-size: 2em;
 }
 h2 {
-	font-size: 1.6em;
+  font-size: 1.6em;
 }
 h3 {
-	font-size: 1.2em;
+  font-size: 1.2em;
 }
 /* anchors */
-
 a {
-	@include sass-transition(color, .3s, ease);
-	text-decoration: none;
-	color: #000;
-	&:hover, &:active {
-		color: #666;
-	}
+  @include sass-transition(color, .3s, ease);
+  text-decoration: none;
+  color: #000;
+  &:hover, &:active {
+    color: #666;
+  }
 }
 /* clearfix [TODO: is needed?] */
 .cf {
-	@include sass-clearfix;
+  @include sass-clearfix;
 }
+
+.wrapper {
+  width: 100%;
+  text-align: justify;
+  font-size: 0;
+  font-size: 12px\9; /* IE6-9 only hack */
+  nav, section {
+    background: white;
+    display: inline-block;
+    font-size: 12px;
+
+    zoom: 1;
+    *display: inline;
+  }
+  &:after{
+    content: "";
+    width: 100%;
+    display: inline-block;
+
+    zoom: 1;
+    *display: inline;
+  }
+}
+
 
 /* NAVIGATION */
 nav {
-	display:inline-block;
-	vertical-align: top;
-	width: 24%; /* [TODO: why 25% breaks layout?] */
-	ul {
-		font-size: 1.8em;
-		margin: 1em;
-		li {
-			margin: .6em;
-			a {
-				font-weight: 400;
-			}
-			.active a {
-				font-weight: 700;
-			}
-		}
-	}
-	ul.social {
-		margin-top: 2em;
-		li {
-			line-height: 1em;
-			font-size: 1.8em;
-		}
-	}
+  display:inline-block;
+  vertical-align: top;
+  width: 20%;
+  ul {
+    font-size: 1.8em;
+    margin: 1em;
+    li {
+      margin: .6em;
+      a {
+        font-weight: 400;
+      }
+      .active a {
+        font-weight: 700;
+      }
+    }
+  }
+  ul.social {
+    margin-top: 2em;
+    li {
+      line-height: 1em;
+      font-size: 1.8em;
+    }
+  }
 }
 
 header {
-	padding: 1em;
-	background-color: #FFF;
-	text-align: left;
-	a:after{
-		content:"|"; 
-	}
+  padding: 1em;
+  background-color: #FFF;
+  text-align: left;
+  a:after{
+    content:"|"; 
+  }
 }
 
 article {
-	padding: 1em;
-	ul {
-		
-		li[itemprop=photography] figcaption {
-			text-align:center;
-			width:100%;
-			display:block;
-			[itemprop=description]{
-				color:#F00;
-			}
-		}
-	}
-	div {
-		width:100%;
-		overflow-x: scroll;
-		ul {
-			list-style-type:none;
-			display:block;
-			margin:0;
-			padding:0;
-			width:auto;
-			white-space:nowrap;
-			li[itemprop=photography] {
-				display: inline-block;
-				margin:6px 10px;
-				[itemprop=description] {
+  ul {
+    
+    li[itemprop=photography] figcaption {
+      text-align:center;
+      width:100%;
+      display:block;
+      [itemprop=description]{
+        color:#F00;
+      }
+    }
+  }
+  div {
+    width:100%;
+    overflow-x: scroll;
+    ul {
+      list-style-type:none;
+      display:block;
+      margin:0;
+      padding:0;
+      width:auto;
+      white-space:nowrap;
+      li[itemprop=photography] {
+        display: inline-block;
+        margin:6px 10px;
+        [itemprop=description] {
 
-				}
-			}
-		}
-	}
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 60em) {
 
 
-	nav {
-		ul {
-			font-size: 1.4em;
-			margin: 2em;
-		}
-		ul.social {
-			li {
-				font-size: 1em;
-				display: inline;
-				margin: .6em .1em;
-			}
-		}
-	}
-	
+  nav {
+    ul {
+      font-size: 1.4em;
+      margin: 2em;
+    }
+    ul.social {
+      li {
+        font-size: 1em;
+        display: inline;
+        margin: .6em .1em;
+      }
+    }
+  }
+  
 }
 
 @media screen and (max-width: 30em) {
 
-	.toggleButton {
-		font-size: 2em;
-		text-align: left;
-		display: inline;
-		float: left;
-		cursor: pointer;
-	}
-	
-	nav {
-		position: fixed;
-		z-index: 1;
-		
-	}
-	section {
-		@include sass-box-shadow(-3px, 0px, 16px, rgba(0, 0, 0, 0.3));
-		position:absolute;
-		background-color: #FFF;
-		top:0;
-		left:0;
-		width: 100%;
-		overflow: hidden;
-		z-index: 10;
-		@include sass-transition(all, .2s, ease-in-out);
-	}
-	section.opened {
-		margin-left: 120px;
-	}
+  .toggleButton {
+    font-size: 2em;
+    text-align: left;
+    display: inline;
+    float: left;
+    cursor: pointer;
+  }
+  
+  nav {
+    position: fixed;
+    z-index: 1;
+    
+  }
+  section {
+    @include sass-box-shadow(-3px, 0px, 16px, rgba(0, 0, 0, 0.3));
+    position:absolute;
+    background-color: #FFF;
+    top:0;
+    left:0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 10;
+    @include sass-transition(all, .2s, ease-in-out);
+  }
+  section.opened {
+    margin-left: 120px;
+  }
 
 }
 
 @media screen and (min-width: 30em) {
-	header {
-		text-align: left;
-	}
-	.main {
-		position: fixed;
-	}
-	.toggleButton {
-		display: none;
-	}
-	section {
-		width: 75%;
-		display: inline-block;
-	}
-	
+  header {
+    text-align: left;
+  }
+  .main {
+    position: fixed;
+  }
+  .toggleButton {
+    display: none;
+  }
+  section {
+    width: 80%;
+    display: inline-block;
+  }
+  
 }
-
-
+/*
 // [TODO retina]
 @media screen and (-webkit-min-device-pixel-ratio: 1.3), screen and (min--moz-device-pixel-ratio: 1.3), screen and (-o-min-device-pixel-ratio: 2 / 1), screen and (min-device-pixel-ratio: 1.3), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-	
+  
 }
+*/

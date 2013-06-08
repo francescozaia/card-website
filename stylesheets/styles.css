@@ -37,8 +37,12 @@ a:hover, a:active { color: #666; }
 .cf:after { clear: both; }
 .cf { *zoom: 1; }
 
+.wrapper { width: 100%; text-align: justify; font-size: 0; font-size: 12px\9; /* IE6-9 only hack */ }
+.wrapper nav, .wrapper section { background: white; display: inline-block; font-size: 12px; zoom: 1; *display: inline; }
+.wrapper:after { content: ""; width: 100%; display: inline-block; zoom: 1; *display: inline; }
+
 /* NAVIGATION */
-nav { display: inline-block; vertical-align: top; width: 24%; /* [TODO: why 25% breaks layout?] */ }
+nav { display: inline-block; vertical-align: top; width: 20%; }
 nav ul { font-size: 1.8em; margin: 1em; }
 nav ul li { margin: .6em; }
 nav ul li a { font-weight: 400; }
@@ -49,7 +53,6 @@ nav ul.social li { line-height: 1em; font-size: 1.8em; }
 header { padding: 1em; background-color: #FFF; text-align: left; }
 header a:after { content: "|"; }
 
-article { padding: 1em; }
 article ul li[itemprop=photography] figcaption { text-align: center; width: 100%; display: block; }
 article ul li[itemprop=photography] figcaption [itemprop=description] { color: #F00; }
 article div { width: 100%; overflow-x: scroll; }
@@ -65,4 +68,4 @@ article div ul li[itemprop=photography] { display: inline-block; margin: 6px 10p
 @media screen and (min-width: 30em) { header { text-align: left; }
   .main { position: fixed; }
   .toggleButton { display: none; }
-  section { width: 75%; display: inline-block; } }
+  section { width: 80%; display: inline-block; } }
