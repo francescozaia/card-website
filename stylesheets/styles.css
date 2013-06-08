@@ -17,10 +17,10 @@ q:before, q:after { content: ''; content: none; }
 
 table { border-collapse: collapse; border-spacing: 0; }
 
-body { overflow-x: hidden; font: normal 62.5%/1.5 'Lato', sans-serif; color: #666; }
+body { overflow-x: hidden; font-family: Lato, sans-serif; color: #666; font-weight: 100; }
 
 /* headings */
-h1, h2, h3 { font-weight: bold; }
+h1, h2, h3 { font-weight: normal; }
 
 h1 { font-size: 2em; }
 
