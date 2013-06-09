@@ -2,67 +2,185 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Test</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Francesco Zaia / Photographer / Web Development</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <!-- TODO
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+      <link rel="apple-touch-icon" href="touch-icon-iphone.png" />
+      <link rel="apple-touch-icon" sizes="72x72" href="touch-icon-ipad.png" />
+      <link rel="apple-touch-icon" sizes="114x114" href="touch-icon-iphone-retina.png" />
+      <link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-retina.png" />
+      <link rel="apple-touch-startup-image" href="startup-image.png">
+    -->
     <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="./stylesheets/styles.css">
-    <link rel="stylesheet" href="./stylesheets/font-awesome.min.css">
+    <!-- TODO
+      <link rel="stylesheet" href="./stylesheets/styles.css">
+      <link rel="stylesheet" href="./stylesheets/font-awesome.min.css">
+    -->
+    <link rel="stylesheet" media="all" href="./stylesheets/main.css">
   </head>
-  <body>
-    <div class="wrapper">
-      <section role="main">
-        <header>
-          <h1>francesco zaia</h1>
-        </header>
-        <article>
-          <h2 id="prototype2">photography</h2>
-          <p class="intro cf">Despite the apparent simplicity, there are many underlying factors which, when thought out and implemented properly, can make that simple solution even better without adding more complexity to the user&nbsp;interface.</p>
-          <div>
-            <ul>
-              <li itemprop="photography">
-                <figure>
-                  <img src="http://farm9.staticflickr.com/8534/8859745156_d526aa98ea_z.jpg" alt="" itemprop="image">
-                  <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
-                </figure>
-                
-              </li>
-              <li itemprop="photography">
-                <figure>
-                  <img src="http://farm9.staticflickr.com/8111/8606832407_579c1b7b4c_z.jpg" alt="" itemprop="image">
-                  <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
-                </figure>
-              </li>
-              <li itemprop="photography">
-                <figure>
-                  <img src="http://farm9.staticflickr.com/8516/8462232013_daf4cfae34_z.jpg" alt="" itemprop="image">
-                  <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
-                </figure>
-              </li>
-              <li itemprop="photography">
-                <figure>
-                  <img src="http://farm9.staticflickr.com/8188/8100556752_22a43c809d_z.jpg" alt="" itemprop="image">
-                  <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
-                </figure>
-                
-              </li>
-              <li itemprop="photography">
-                <figure>
-                  <img src="http://farm9.staticflickr.com/8382/8485709401_95d1dee6ae_z.jpg" alt="" itemprop="image">
-                  <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
-                </figure>
-              </li>
-              <li itemprop="photography">
-                <figure>
-                  <img src="http://farm9.staticflickr.com/8196/8087020012_557aa48e3d_z.jpg" alt="" itemprop="image">
-                  <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
-                </figure>
-              </li>
-            </ul>
-          </div>
-        </article>
-      </section>
+  <body  class="grid" data-issue="1" >
+    <div id="wrapper">
+      <div id="content" data-script="Articles">
+        <section role="main">
+
+          <!-- Cover -->
+
+          <article id="cover" class="title-page" data-google="Cover">
+            <header>
+              <h1>francescozaia</h1>
+              <p>Blah</p>
+              <p>
+                <span>ISSUE</span>
+                <em>Esc</em>
+                <em>Scroll</em>
+                <em>Keyboard</em>
+              </p>
+            </header>
+          </article>
+
+          <!-- photography -->
+
+          <article class="title-page fullscreen" data-height="800" data-google="Chapter 1">
+            <img src="./images/bg/scotland.jpg" class="background" alt="">
+            <header style="top: 456px;">
+              <p>test<br>test</p>
+              <h1>photography</h1>  
+              <p>test<br>test</p>
+            </header>
+            <hgroup>
+              <h2>top left</h2>
+              <h3>top right</h3>
+              <h4>♠</h4>
+              <h5>pag 1</h5>
+            </hgroup>
+            <div class="modal-extras" style="top: 456px;">
+              <a href="#" data-location="Verona" data-modal-id="italy" data-year="2011"></a>
+              <a href="#" data-camera="5D MKII" data-modal-id="canon" data-lens="50mm f/1.2"></a>
+            </div>
+          </article>
+          
+          <!-- interlude -->
+          
+          <article class="title-page interlude" id="interlude-pioneer" data-script="Pioneer" data-google="Interlude 1">
+            <header>
+              <img src="./images/pioneer_planets.png" alt="">
+              <div id="interlude-pioneer-craft"><img src="./images/pioneer_craft.png" alt=""></div>
+            </header>
+            <figure style="height: 400px; margin-top: -425px;"></figure>
+            <hgroup>
+              <h2>INTERLUDE</h2>
+              <h3>PIONEER 10/11</h3>
+              <h4>♠</h4>
+              <h5>♥</h5>
+            </hgroup>
+          </article>
+          
+          <!-- project -->
+
+          <article data-google="Japan">
+            <div class="interior">
+              <div class="column" style="">
+                <header>
+                  <h1>progetto</h1>
+                </header>
+                <div class="text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.I gravitate toward the beauty in these seemingly opposite forces. It parallels my own life as I struggle with balance in a life surrounded by ever-changing technology.</p>
+                  <p class="footnotes">
+                    × Camera: Yashica 124G<br>
+                    × Japan 
+                  </p>
+                  <div class="numeral">No. 4</div>
+                </div>
+                <div class="modal-extras">
+                  <a href="#" data-location="Japan" data-modal-id="japan" data-year="2008"></a>
+                  <a href="#" data-camera="Yashica 124G" data-modal-id="yashica" data-film="Kodak Portra"></a>
+                </div>
+              </div>
+              <figure>
+                <img src="./images/japan-1.jpg" alt="">
+                <img src="./images/japan-2.jpg" alt="">
+                <img src="./images/japan-3.jpg" alt="">
+                <img src="./images/japan-4.jpg" alt="">
+                <img src="./images/japan-5.jpg" alt="">
+                <img src="./images/japan-8.jpg" alt="">
+              </figure>
+            </div>
+          </article>
+        
+          <!-- photography -->
+
+          <article class="title-page fullscreen" data-height="1150" data-google="Chapter 2">
+            <img src="./images/bg/ghirri.jpg" class="background" alt="">
+            <header>
+              <h1>DISCOVER</h1>
+              <blockquote>
+                <p>
+                  <em>"Certuni vanno in viaggio e guardano solo quello che gli hanno detto di guardare altrimenti si sentono persi. Ma io mi chiedo: è meglio sentirsi persi o guardare solo quello che ti hanno detto di guardare?"</em>
+                </p>
+                <p>
+                  <em>"Some people go traveling and only look at what they told him to look otherwise they feel lost. But I wonder: is it better to feel lost or watching only what they told you to look"</em> <!--TODO-->
+                </p>
+                <p>(Luigi Ghirri)</p>
+              </blockquote>
+              <p>A. Earhart</p>
+            </header>
+            <hgroup>
+              <h2></h2>
+              <h3></h3>
+              <h4>♠</h4>
+              <h5>♥</h5>
+            </hgroup>
+            <div class="modal-extras" style="top: 456px;">
+              <a href="#" data-location="Verona" data-modal-id="italy" data-year="2011"></a>
+              <a href="#" data-camera="5D MKII" data-modal-id="canon" data-lens="50mm f/1.2"></a>
+            </div>
+          </article>
+
+          <!-- bye -->
+
+          <article class="title-page credits _inview" data-google="Credits">
+            <header>
+              <h1>gatto</h1>
+              <p>AUTHOR</p>
+           </header>
+           <hgroup>
+              <h2>♦</h2>
+              <h3>♣</h3>
+              <h4>♠</h4>
+              <h5>♥</h5>
+            </hgroup>
+          </article>
+
+        </section>
+      </div>
     </div>
-    <script type="text/javascript" src="./scripts/delegate.js"></script>
-    <script type="text/javascript" src="./scripts/main.js"></script>
+
+    <!-- Table of contents -->
+    <div id="toc" data-script="Contact">
+      <h1>todo</h1>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+      <h2>author</h2>
+      <p>todo</p>
+      <h2>follow</h2>
+      <p>(social)</p>
+    </div>
+    
+    <!-- Modal -->
+    <div id="modal" data-script="Modal">
+      <div class="bg"></div>
+      <div class="modal-details"></div>
+    </div>
+
+    <!-- scripts -->
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <script src="./scripts/article.js"></script>
+    <script src="./scripts/setup.js"></script>
+    <!--
+      <script src="./scripts/libs/delegate.js"></script>
+      <script src="./scripts/main.js"></script>
+    -->
   </body>
 </html>
