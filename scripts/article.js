@@ -311,7 +311,10 @@ $(function () {
             }
 
 
-            $.Window.on('scroll', on_scroll);
+            //$.Window.on('on_scroll', on_scroll);
+
+        
+            $(window).scroll( $.throttle( 250, on_scroll ) );
 
             
         });
