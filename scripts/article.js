@@ -45,7 +45,6 @@ $(function () {
 
         function on_seek(seekdataindex) {
             $.Body.stop().animate({scrollTop: HEIGHTS[seekdataindex].min}, "slow");
-
         }
 
         function on_next(e) {
@@ -96,6 +95,7 @@ $(function () {
             }
 
         }
+
 
         function on_keyprev(e) {
 
@@ -313,65 +313,7 @@ $(function () {
 
             $.Window.on('scroll', on_scroll);
 
-            /*
-
-            function _keyright(e) {
-                e.preventDefault();
-                if (articleActive == index) {
-                    if ($figure_children.length > 1) {
-                        articleActive_figure++;
-                        if (articleActive_figure < $figure_children.length) {
-                            $figure_children.each(function (i) {
-                                if (i == articleActive_figure) {
-                                    $.Body.stop().animate({
-                                            scrollTop: $(this).offset().top - 250
-                                        }, "slow")
-                                }
-                            })
-                        } else {
-                            articleActive_figure = 0;
-                            setTimeout(function () {
-                                $.Body.triggerHandler($.Events.ARTICLE_NEXT)
-                            }, 100)
-                        }
-                    } else {
-                        articleActive_figure = 0;
-                        setTimeout(function () {
-                            $.Body.triggerHandler($.Events.ARTICLE_NEXT)
-                        }, 100)
-                    }
-                }
-            }
-
-            function _keyleft(e) {
-                e.preventDefault();
-                if (articleActive == index) {
-                    if ($figure_children.length > 1) {
-                        articleActive_figure--;
-                        if (articleActive_figure >= 0) {
-                            $figure_children.each(function (i) {
-                                if (i == articleActive_figure) {
-                                    $.Body.stop().animate({
-                                            scrollTop: $(this).offset().top - 250
-                                        }, "slow")
-                                }
-                            })
-                        } else {
-                            articleActive_figure = 0;
-                            setTimeout(function () {
-                                $.Body.triggerHandler($.Events.ARTICLE_PREV)
-                            }, 100)
-                        }
-                    } else {
-                        articleActive_figure = 0;
-                        setTimeout(function () {
-                            $.Body.triggerHandler($.Events.ARTICLE_PREV)
-                        }, 100)
-                    }
-                }
-            }
-
-            */
+            
         });
 
         setBodyHeight();
