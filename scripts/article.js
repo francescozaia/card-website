@@ -170,7 +170,7 @@ $(function () {
                 $videos = $self.find('[data-video]'),
                 view = '',
                 articleActive_figure = 0,
-                dataid = $self.attr('data-google'),
+                dataid = $self.attr('data-article'),
                 titlePage = $self.hasClass('title-page'),
                 chapter = $self.hasClass('chapter'),
                 fullscreen = $self.hasClass('fullscreen'),
@@ -310,13 +310,11 @@ $(function () {
                 view = vS;
             }
 
+            if(!(navigator.userAgent.match(/iPhone/i)))
+                $.Window.on('scroll', on_scroll);
+            else
+                $("article").css({position:"relative"})
 
-            //$.Window.on('on_scroll', on_scroll);
-
-        
-            $(window).scroll( $.throttle( 250, on_scroll ) );
-
-            
         });
 
         setBodyHeight();

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Francesco Zaia / Photographer / Web Development</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+    
     <!-- TODO
       <meta name="apple-mobile-web-app-capable" content="yes">
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -18,156 +18,159 @@
       <link rel="stylesheet" href="./stylesheets/styles.css">
       <link rel="stylesheet" href="./stylesheets/font-awesome.min.css">
     -->
+    <link rel="stylesheet" media="all" href="./stylesheets/normalize.css">
     <link rel="stylesheet" media="all" href="./stylesheets/main.css">
-  </head>
-  <body  class="grid" data-issue="1" >
+</head>
+<body  class="grid" data-issue="1" >
     <div id="wrapper">
-      <div id="content" data-script="Articles">
-        <section role="main">
+        <div id="content" data-script="Articles">
+            <section role="main">
 
-          <!-- Cover -->
+                <!-- Cover -->
 
-          <article id="cover" class="title-page" data-google="Cover">
-            <header>
-              <h1>francescozaia</h1>
-              <p>Blah</p>
-              <p>
-                <span>ISSUE</span>
-                <em>Esc</em>
-                <em>Scroll</em>
-                <em>Keyboard</em>
-              </p>
-            </header>
-          </article>
+                <article class="article-cover" data-article="Cover">
+                    <header>
+                        <h1>francescozaia</h1>
+                        <div>
+                            <p>Blah</p>
+                            <p>
+                                <span>ISSUE</span>
+                                <em>Esc</em>
+                                <em>Scroll</em>
+                                <em>Keyboard</em>
+                            </p>
+                        </div>
+                    </header>
+                    
+                    <hgroup>
+                        <h2>top left</h2>
+                        <h3>top right</h3>
+                        <h4></h4>
+                        <h5>pag 1</h5>
+                    </hgroup>
+                </article>
 
-          <!-- photography -->
+                <!-- photography -->
 
-          <article class="title-page fullscreen" data-height="800" data-google="Chapter 1">
-            <img src="./images/bg/scotland.jpg" class="background" alt="">
-            <header style="top: 456px;">
-              <p>test<br>test</p>
-              <h1>photography</h1>  
-              <p>test<br>test</p>
-            </header>
-            <hgroup>
-              <h2>top left</h2>
-              <h3>top right</h3>
-              <h4>♠</h4>
-              <h5>pag 1</h5>
-            </hgroup>
-            <div class="modal-extras" style="top: 456px;">
-              <a href="#" data-location="Verona" data-modal-id="italy" data-year="2011"></a>
-              <a href="#" data-camera="5D MKII" data-modal-id="canon" data-lens="50mm f/1.2"></a>
-            </div>
-          </article>
-          
-          <!-- interlude -->
-          
-          <article class="title-page interlude" id="interlude-pioneer" data-script="Pioneer" data-google="Interlude 1">
-            <header>
-              <img src="./images/pioneer_planets.png" alt="">
-              <div id="interlude-pioneer-craft"><img src="./images/pioneer_craft.png" alt=""></div>
-            </header>
-            <figure style="height: 400px; margin-top: -425px;"></figure>
-            <hgroup>
-              <h2>INTERLUDE</h2>
-              <h3>PIONEER 10/11</h3>
-              <h4>♠</h4>
-              <h5>♥</h5>
-            </hgroup>
-          </article>
-          
-          <!-- project -->
+                <article class="article-cover fullscreen" data-height="800" data-article="Chapter 1">
+                    <img src="./images/bg/scotland.jpg" class="background-image" alt="">
+                    <header>
+                        <p>test<br>test</p>
+                        <h1>photography</h1>
+                        <p>test<br>test</p>
+                    </header>
+                    <hgroup>
+                        <h2>top left</h2>
+                        <h3>top right</h3>
+                        <h4>♠</h4>
+                        <h5>pag 1</h5>
+                    </hgroup>
+                    <div class="modal-extras" style="top: 456px;">
+                    <a href="#" data-location="Verona" data-modal-id="italy" data-year="2011"></a>
+                    <a href="#" data-camera="5D MKII" data-modal-id="canon" data-lens="50mm f/1.2"></a>
+                    </div>
+                </article>
 
-          <article data-google="Japan">
-            <div class="interior">
-              <div class="column" style="">
-                <header>
-                  <h1>progetto</h1>
-                </header>
-                <div class="text">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.I gravitate toward the beauty in these seemingly opposite forces. It parallels my own life as I struggle with balance in a life surrounded by ever-changing technology.</p>
-                  <p class="footnotes">
-                    × Camera: Yashica 124G<br>
-                    × Japan 
-                  </p>
-                  <div class="numeral">No. 4</div>
-                </div>
-                <div class="modal-extras">
-                  <a href="#" data-location="Japan" data-modal-id="japan" data-year="2008"></a>
-                  <a href="#" data-camera="Yashica 124G" data-modal-id="yashica" data-film="Kodak Portra"></a>
-                </div>
-              </div>
-              <figure>
-                <img src="./images/japan-1.jpg" height="556" alt="">
-                <img src="./images/japan-2.jpg" height="556" alt="">
-                <img src="./images/japan-3.jpg" height="556" alt="">
-                <img src="./images/japan-4.jpg" height="556" alt="">
-                <img src="./images/japan-5.jpg" height="556" alt="">
-                <img src="./images/japan-8.jpg" height="556" alt="">
-              </figure>
-            </div>
-          </article>
-        
-          <!-- photography -->
+                <!-- interlude -->
 
-          <article class="title-page fullscreen" data-height="1150" data-google="Chapter 2">
-            <img src="./images/bg/ghirri.jpg" class="background" alt="">
-            <header>
-              <h1>DISCOVER</h1>
-              <blockquote>
-                <p>
-                  <em>"Certuni vanno in viaggio e guardano solo quello che gli hanno detto di guardare altrimenti si sentono persi. Ma io mi chiedo: è meglio sentirsi persi o guardare solo quello che ti hanno detto di guardare?"</em>
-                </p>
-                <p>
-                  <em>"Some people go traveling and only look at what they told him to look otherwise they feel lost. But I wonder: is it better to feel lost or watching only what they told you to look"</em> <!--TODO-->
-                </p>
-                <p>(Luigi Ghirri)</p>
-              </blockquote>
-              <p>A. Earhart</p>
-            </header>
-            <hgroup>
-              <h2></h2>
-              <h3></h3>
-              <h4>♠</h4>
-              <h5>♥</h5>
-            </hgroup>
-            <div class="modal-extras" style="top: 456px;">
-              <a href="#" data-location="Verona" data-modal-id="italy" data-year="2011"></a>
-              <a href="#" data-camera="5D MKII" data-modal-id="canon" data-lens="50mm f/1.2"></a>
-            </div>
-          </article>
+                <article class="article-cover interlude" id="interlude-pioneer" data-script="Pioneer" data-article="Interlude 1">
+                    <header>
+                        <img src="./images/pioneer_planets.png" alt="">
+                        <div id="interlude-pioneer-craft">
+                            <img src="./images/pioneer_craft.png" alt="">
+                        </div>
+                    </header>
+                    <figure style="height: 400px; margin-top: -425px;"></figure>
+                    <hgroup>
+                        <h2>INTERLUDE</h2>
+                        <h3>PIONEER 10/11</h3>
+                        <h4>♠</h4>
+                        <h5>♥</h5>
+                    </hgroup>
+                </article>
 
-          <!-- bye -->
+                <!-- project -->
 
-          <article class="title-page credits _inview" data-google="Credits">
-            <header>
-              <h1>gatto</h1>
-              <p>AUTHOR</p>
-           </header>
-           <hgroup>
-              <h2>♦</h2>
-              <h3>♣</h3>
-              <h4>♠</h4>
-              <h5>♥</h5>
-            </hgroup>
-          </article>
+                <article data-article="Japan">
+                    <div class="interior">
+                        <div class="column">
+                            <header>
+                                <h1>progetto</h1>
+                            </header>
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                <p class="footnotes">× Camera: Yashica 124G<br>× Japan</p>
+                                <div class="numeral">No. 4</div>
+                            </div>
+                            <div class="modal-extras">
+                                <a href="#" data-location="Japan" data-modal-id="japan" data-year="2008"></a>
+                                <a href="#" data-camera="Yashica 124G" data-modal-id="yashica" data-film="Kodak Portra"></a>
+                            </div>
+                        </div>
+                        <figure>
+                            <img src="./images/japan-1.jpg" height="556" alt="">
+                            <img src="./images/japan-2.jpg" height="556" alt="">
+                            <img src="./images/japan-3.jpg" height="556" alt="">
+                            <img src="./images/japan-4.jpg" height="556" alt="">
+                            <img src="./images/japan-5.jpg" height="556" alt="">
+                            <img src="./images/japan-8.jpg" height="556" alt="">
+                        </figure>
+                    </div>
+                </article>
 
-        </section>
-      </div>
+                <!-- photography -->
+
+                <article class="article-cover fullscreen" data-height="1150" data-article="Chapter 2">
+                    <img src="./images/bg/ghirri.jpg" class="background-image" alt="">
+                    <header>
+                        <h1>DISCOVER</h1>
+                        <blockquote>
+                            <p><em>"Certuni vanno in viaggio e guardano solo quello che gli hanno detto di guardare altrimenti si sentono persi. Ma io mi chiedo: è meglio sentirsi persi o guardare solo quello che ti hanno detto di guardare?"</em></p>
+                            <p><em>"Some people go traveling and only look at what they told him to look otherwise they feel lost. But I wonder: is it better to feel lost or watching only what they told you to look"</em> <!--TODO--></p>
+                            <p>(Luigi Ghirri)</p>
+                        </blockquote>
+                    </header>
+                    <hgroup>
+                        <h2></h2>
+                        <h3></h3>
+                        <h4>♠</h4>
+                        <h5>♥</h5>
+                    </hgroup>
+                    <div class="modal-extras" style="top: 456px;">
+                        <a href="#" data-location="Verona" data-modal-id="italy" data-year="2011"></a>
+                        <a href="#" data-camera="5D MKII" data-modal-id="canon" data-lens="50mm f/1.2"></a>
+                    </div>
+                </article>
+
+                <!-- bye -->
+
+                <article class="article-cover credits _inview" data-article="Credits">
+                    <header>
+                        <h1>gatto</h1>
+                        <p>AUTHOR</p>
+                    </header>
+                    <hgroup>
+                        <h2>♦</h2>
+                        <h3>♣</h3>
+                        <h4>♠</h4>
+                        <h5>♥</h5>
+                    </hgroup>
+                </article>
+            </section>
+        </div>
     </div>
 
     <!-- Table of contents -->
-    <div id="toc" data-script="Contact">
-      <h1>todo</h1>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-      <h2>author</h2>
-      <p>todo</p>
-      <h2>follow</h2>
-      <p>(social)</p>
-    </div>
-    
+
+    <summary id="about" data-script="Contact">
+        <h1>todo</h1>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <h2>author</h2>
+        <p>todo</p>
+        <h2>follow</h2>
+        <p>(social)</p>
+    </summary>
+
     <!-- Modal -->
     <div id="modal" data-script="Modal">
       <div class="bg"></div>
@@ -175,24 +178,8 @@
     </div>
 
     <!-- scripts -->
-
     <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
-    <script type="text/javascript">
-    /*
-    * jQuery throttle / debounce - v1.1 - 3/7/2010
-    * http://benalman.com/projects/jquery-throttle-debounce-plugin/
-    * 
-    * Copyright (c) 2010 "Cowboy" Ben Alman
-    * Dual licensed under the MIT and GPL licenses.
-    * http://benalman.com/about/license/
-    */
-    (function(b,c){var $=b.jQuery||b.Cowboy||(b.Cowboy={}),a;$.throttle=a=function(e,f,j,i){var h,d=0;if(typeof f!=="boolean"){i=j;j=f;f=c}function g(){var o=this,m=+new Date()-d,n=arguments;function l(){d=+new Date();j.apply(o,n)}function k(){h=c}if(i&&!h){l()}h&&clearTimeout(h);if(i===c&&m>e){l()}else{if(f!==true){h=setTimeout(i?k:l,i===c?e-m:e)}}}if($.guid){g.guid=j.guid=j.guid||$.guid++}return g};$.debounce=function(d,e,f){return f===c?a(d,e,false):a(d,f,e!==false)}})(this);
-    </script>
     <script src="./scripts/article.js"></script>
     <script src="./scripts/setup.js"></script>
-    <!--
-      <script src="./scripts/libs/delegate.js"></script>
-      <script src="./scripts/main.js"></script>
-    -->
-  </body>
+</body>
 </html>
