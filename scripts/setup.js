@@ -56,6 +56,6 @@ $(function () {
     $.Body.Keyboard();
 
     $('[data-script]').Instantiate();
-    $('article').Article();
+    //$('article').Article();
 
 });
