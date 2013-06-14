@@ -79,6 +79,7 @@ article figure {
 }
 article figure img {
   display: block;
+  margin-bottom: 20px;
 }
 article .numeral {
   position: absolute;
@@ -90,53 +91,70 @@ article .numeral {
   border-bottom: 2px solid #444;
   text-align: center;
 }
+article.gallery {
+  background-color: #EFEADD;
+}
+article.gallery img {
+  border: 1px solid #FFF;
+}
 article.article-cover {
   background: #f2f2f2;
-}
-article.article-cover h1, article.article-cover p {
-  text-align: center;
+  /*
+  .background-image {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+  }
+  */
 }
 article.article-cover header {
   position: absolute;
   left: 50%;
   top: 50%;
-  margin: -150px 0 0 -512px !important;
+  margin: -150px 0 0 -512px;
   width: 1024px;
   padding: 0;
-  height: 350px;
+  height: 300px;
 }
-article.article-cover h1 {
-  font-size: 11em;
+article.article-cover h1, article.article-cover h2 {
   font-style: italic;
   text-align: center;
   width: 100%;
   margin: 0;
 }
-article.article-cover h2, article.article-cover h3, article.article-cover h4, article.article-cover h5 {
-  position: absolute;
+article.article-cover h1 {
+  font-size: 11em;
 }
 article.article-cover h2 {
-  left: 50px;
-  top: 50px;
+  font-size: 6em;
 }
 article.article-cover h3 {
-  right: 50px;
-  top: 50px;
-}
-article.article-cover h4 {
-  right: 50px;
-  bottom: 50px;
-}
-article.article-cover h5 {
-  left: 50px;
-  bottom: 50px;
-}
-article.article-cover .background-image {
-  display: block;
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
+}
+article.article-cover h3.tl {
+  top: 30px;
+  left: 30px;
+}
+article.article-cover h3.tr {
+  top: 30px;
+  right: 30px;
+}
+article.article-cover h3.bl {
+  bottom: 30px;
+  left: 30px;
+}
+article.article-cover h3.br {
+  bottom: 30px;
+  right: 30px;
+}
+article.article-cover p {
+  text-align: center;
+}
+article.article-cover.chapter header {
+  height: 500px;
+  margin-top: -250px;
 }
 
 /* ---------------------------------- */
@@ -269,7 +287,6 @@ summary p a:hover {
 .column {
   margin: 0 0 0 50px;
   padding: 0 0 0 0;
-  border: 1px solid #fff;
 }
 
 .text {
