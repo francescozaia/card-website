@@ -13,43 +13,23 @@
       <link rel="apple-touch-icon" sizes="144x144" href="touch-icon-ipad-retina.png" />
       <link rel="apple-touch-startup-image" href="startup-image.png">
     -->
+
     <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
-   <script src="./scripts/libs/yepnope.js"></script>
-    <!-- TODO
-    <link rel="stylesheet" href="./stylesheets/styles.css">
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWq6sWLWRqWkzKTSSeHNDAx7UbKD3434M&sensor=true&libraries=places"></script>-->
     <link rel="stylesheet" href="./stylesheets/font-awesome.min.css?v=0.2">
-    
     <link rel="stylesheet" media="all" href="./stylesheets/normalize.css">
     <link rel="stylesheet" media="all" href="./stylesheets/main.css">
+
+    <script src="./scripts/libs/yepnope.js"></script>
+
 </head>
 <body>
-    <style type="text/css">
-    .load-overlay {
-position: fixed;
-width: 100%;
-height: 100%;
-top: 0;
-left: 0;
-background: #fff none;
-z-index: 999000;
-}
-.load-overlay-center {
-position: absolute;
-width: 400px;
-height: 200px;
-top: 50%;
-left: 50%;
-margin: -100px 0 0 -200px;
-z-index: 99001;
-color: #000;
-text-align: center;
-}
-</style>
+    
     <div class="load-overlay" style=" ">
-        <div class="load-overlay-center">
-            <img src="http://www.webquantified.com/images/preload.gif" width="320" height="100" alt="Loading"> <!-- sostituire -->
-        </div>
+        <style type="text/css">
+        .load-overlay { position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: #fff none; z-index: 999000; }
+        .load-overlay-center { position: absolute; width: 400px; height: 200px; top: 50%; left: 50%; margin: -100px 0 0 -200px; z-index: 99001; text-align: center; }
+        </style>
+        <div class="load-overlay-center">...loading...</div>
     </div>
     <div id="wrapper">
         <div id="content" data-script="Articles">
@@ -166,10 +146,7 @@ text-align: center;
                 <article class="article-cover credits _inview" data-article="Credits">
                     <header>
                         <h1>gatto</h1>
-                        <div id="instafeed"></div> 
-                        <div>
-                            <div id="map_canvas" style="width: 100%; height: 400px;">AUTHOR</div>
-                        </div>
+                        <div id="instafeed"></div>
                     </header>
                 </article>
             </section>
@@ -201,9 +178,9 @@ text-align: center;
     <script type="text/javascript">
     var feed = new Instafeed({
         get: 'tagged',
-        tagName: 'polesine',
+        tagName: 'bologna',
         clientId: '13d1de52b990407382f7424a178e42e8',
-        template: '<a href="{{link}}"><img src="{{image}}" /></a>'
+        template: '<a href="{{link}}"><img width="100" height="100" src="{{image}}" /></a>'
     });
     feed.run();
 </script>
