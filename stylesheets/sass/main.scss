@@ -119,29 +119,31 @@ article {
         h2 {
             font-size: 6em;
         }
-        h3 {
-            position: absolute;
-            &.tl {
-                top: 30px;
-                left: 30px;
-            }
-            &.tr {
-                top: 30px;
-                right: 30px;
-            }
-            &.bl {
-                bottom: 30px;
-                left: 30px;
-            }
-            &.br {
-                bottom: 30px;
-                right: 30px;
+        hgroup {
+            h3 {
+                position: absolute;
+                &.tl {
+                    top: 30px;
+                    left: 30px;
+                }
+                &.tr {
+                    top: 30px;
+                    right: 30px;
+                }
+                &.bl {
+                    bottom: 30px;
+                    left: 30px;
+                }
+                &.br {
+                    bottom: 30px;
+                    right: 30px;
+                }
             }
         }
+        
         p {
             text-align: center;
         }
-        /*
         .background-image {
             display: block;
             position: absolute;
@@ -149,7 +151,6 @@ article {
             left: 0;
             height: 100%;
         }
-        */
         &.chapter {
             header {
                 height: 500px;

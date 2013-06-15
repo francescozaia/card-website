@@ -99,15 +99,6 @@ article.gallery img {
 }
 article.article-cover {
   background: #f2f2f2;
-  /*
-  .background-image {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-  }
-  */
 }
 article.article-cover header {
   position: absolute;
@@ -130,27 +121,34 @@ article.article-cover h1 {
 article.article-cover h2 {
   font-size: 6em;
 }
-article.article-cover h3 {
+article.article-cover hgroup h3 {
   position: absolute;
 }
-article.article-cover h3.tl {
+article.article-cover hgroup h3.tl {
   top: 30px;
   left: 30px;
 }
-article.article-cover h3.tr {
+article.article-cover hgroup h3.tr {
   top: 30px;
   right: 30px;
 }
-article.article-cover h3.bl {
+article.article-cover hgroup h3.bl {
   bottom: 30px;
   left: 30px;
 }
-article.article-cover h3.br {
+article.article-cover hgroup h3.br {
   bottom: 30px;
   right: 30px;
 }
 article.article-cover p {
   text-align: center;
+}
+article.article-cover .background-image {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
 }
 article.article-cover.chapter header {
   height: 500px;
