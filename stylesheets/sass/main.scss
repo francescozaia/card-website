@@ -75,9 +75,12 @@ article {
         left: 400px; 
         margin: 0; 
         padding: 0;
+        ul { list-style-type: none; display: block; margin: 0; padding: 0; width: auto; white-space: nowrap; }
         img {
             display: block;
-            margin-bottom: 20px;
+        }
+        figcaption {
+            margin-top: -20px;
         }
     }
     .numeral {

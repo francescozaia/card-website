@@ -77,9 +77,19 @@ article figure {
   margin: 0;
   padding: 0;
 }
+article figure ul {
+  list-style-type: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  white-space: nowrap;
+}
 article figure img {
   display: block;
-  margin-bottom: 20px;
+}
+article figure figcaption {
+  margin-top: -20px;
 }
 article .numeral {
   position: absolute;

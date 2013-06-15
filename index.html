@@ -18,12 +18,39 @@
     <!-- TODO
     <link rel="stylesheet" href="./stylesheets/styles.css">
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCWq6sWLWRqWkzKTSSeHNDAx7UbKD3434M&sensor=true&libraries=places"></script>-->
-    <link rel="stylesheet" href="./stylesheets/font-awesome.min.css">
+    <link rel="stylesheet" href="./stylesheets/font-awesome.min.css?v=0.2">
     
     <link rel="stylesheet" media="all" href="./stylesheets/normalize.css">
     <link rel="stylesheet" media="all" href="./stylesheets/main.css">
 </head>
 <body>
+    <style type="text/css">
+    .load-overlay {
+position: fixed;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+background: #fff none;
+z-index: 999000;
+}
+.load-overlay-center {
+position: absolute;
+width: 400px;
+height: 200px;
+top: 50%;
+left: 50%;
+margin: -100px 0 0 -200px;
+z-index: 99001;
+color: #000;
+text-align: center;
+}
+</style>
+    <div class="load-overlay" style=" ">
+        <div class="load-overlay-center">
+            <img src="http://www.webquantified.com/images/preload.gif" width="320" height="100" alt="Loading"> <!-- sostituire -->
+        </div>
+    </div>
     <div id="wrapper">
         <div id="content" data-script="Articles">
             <section role="main">
@@ -76,7 +103,7 @@
                             <img src="./images/pioneer_craft.png" alt="">
                         </div>
                     </header>
-                    <figure style="height: 400px; margin-top: -425px;"></figure>
+                    <!-- <figure style="height: 400px; margin-top: -425px;"></figure> -->
                 </article>
 
                 <!-- project -->
@@ -97,20 +124,80 @@
                                 <a href="#" data-camera="Yashica 124G" data-modal-id="yashica" data-film="Kodak Portra"></a>
                             </div>
                         </div>
-                        <figure>
-                            <img src="http://farm9.staticflickr.com/8426/7496634468_2575c1a9fb_z.jpg" height="427" alt="">
-                            <img src="http://farm9.staticflickr.com/8001/7496636268_b9e78b1d3a_z.jpg" height="427" alt="">
-                            <img src="http://farm8.staticflickr.com/7263/7496639286_070b6f6de2_z.jpg" height="427" alt="">
-                            <img src="http://farm8.staticflickr.com/7260/7496641506_375f92cc61_z.jpg" height="427" alt="">
-                            <img src="http://farm9.staticflickr.com/8294/7496644700_9a01934ac1_z.jpg" height="427" alt="">
-                        </figure>
+                                <figure class="galleryList">
+                                    <ul>
+                                    <li itemprop="photography">
+                                    <img src="http://farm9.staticflickr.com/8426/7496634468_2575c1a9fb_z.jpg" height="427" alt="">
+                                    <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
+                                    </li>
+                                    <li itemprop="photography">
+                                    <img src="http://farm9.staticflickr.com/8001/7496636268_b9e78b1d3a_z.jpg" height="427" alt="">
+                                    <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
+                                    </li>
+                                    <li itemprop="photography">
+                                    <img src="http://farm8.staticflickr.com/7263/7496639286_070b6f6de2_z.jpg" height="427" alt="">
+                                    <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
+                                    </li>
+                                    <li itemprop="photography">
+                                    <img src="http://farm8.staticflickr.com/7260/7496641506_375f92cc61_z.jpg" height="427" alt="">
+                                    <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
+                                    </li>
+                                    <li itemprop="photography">
+                                    <img src="http://farm9.staticflickr.com/8294/7496644700_9a01934ac1_z.jpg" height="427" alt="">
+                                    <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
+                                    </li>
+                                    </ul>
+                                </figure>
+                        
+                        <!--<div class="ippa">
+                            <ul>
+                              <li itemprop="photography">
+                                <figure>
+                                  <img src="http://farm9.staticflickr.com/8534/8859745156_d526aa98ea_z.jpg" alt="" itemprop="image">
+                                  <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
+                                </figure>
+                                
+                              </li>
+                              <li itemprop="photography">
+                                <figure>
+                                  <img src="http://farm9.staticflickr.com/8111/8606832407_579c1b7b4c_z.jpg" alt="" itemprop="image">
+                                  <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
+                                </figure>
+                              </li>
+                              <li itemprop="photography">
+                                <figure>
+                                  <img src="http://farm9.staticflickr.com/8516/8462232013_daf4cfae34_z.jpg" alt="" itemprop="image">
+                                  <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
+                                </figure>
+                              </li>
+                              <li itemprop="photography">
+                                <figure>
+                                  <img src="http://farm9.staticflickr.com/8188/8100556752_22a43c809d_z.jpg" alt="" itemprop="image">
+                                  <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
+                                </figure>
+                                
+                              </li>
+                              <li itemprop="photography">
+                                <figure>
+                                  <img src="http://farm9.staticflickr.com/8382/8485709401_95d1dee6ae_z.jpg" alt="" itemprop="image">
+                                  <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
+                                </figure>
+                              </li>
+                              <li itemprop="photography">
+                                <figure>
+                                  <img src="http://farm9.staticflickr.com/8196/8087020012_557aa48e3d_z.jpg" alt="" itemprop="image">
+                                  <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
+                                </figure>
+                              </li>
+                            </ul>
+                        </div>-->
                     </div>
                 </article>
 
                 <!-- photography -->
 
                 <article class="article-cover chapter fullscreen" data-height="600" data-article="Chapter 2">
-                    <img src="http://farm7.staticflickr.com/6162/6251107652_7364d3d430.jpg" class="background-image" alt=""></p>
+                    <img src="http://farm7.staticflickr.com/6162/6251107652_7364d3d430_b.jpg" class="background-image" alt=""></p>
                     <header>
                         <blockquote>
                             <p><em>"Certuni vanno in viaggio e guardano solo quello che gli hanno detto di guardare altrimenti si sentono persi. Ma io mi chiedo: è meglio sentirsi persi o guardare solo quello che ti hanno detto di guardare?"</em></p>
