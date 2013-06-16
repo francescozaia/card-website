@@ -17,9 +17,6 @@ $(function () {
         ARTICLE_NEXT: 'articleNext',
         ARTICLE_PREV: 'articlePrev',
 
-        MODAL: 'modalEnter',
-        ABOUT: 'modalAbout',
-
         KEY_ESC: 'keyEscape',
         KEY_ENTER: 'keyEnter',
         KEY_SPACE: 'keySpace',
@@ -184,12 +181,10 @@ $(function () {
                 $figure_children = $figure.children(),
                 $column = $self.find('.column'),
                 $header = $self.find('header'),
-                $extras = $self.find('.modal-extras'),
                 view = '',
                 articleActive_figure = 0,
                 dataid = $self.attr('data-article'),
-                chapter = $self.hasClass('chapter'),
-                fullscreen = $self.hasClass('fullscreen'),
+                withFullscreenImage = $self.hasClass('with-fullscreen-image'),
                 dataindex = index,
                 fixedHeight = $self.attr('data-height'),
                 columnHeight = $column ? $column.height() : 0,
@@ -234,9 +229,14 @@ $(function () {
 
                 runningHeight += theheight();
 
-                if (chapter) {
-                    $header.css({top: theSelfHeight() < $.Window.height() ? theSelfHeight() / 2 : $.Window.height() / 2});
-                    $extras.css({top: theSelfHeight() < $.Window.height() ? theSelfHeight() / 2 : $.Window.height() / 2});
+                if (withFullscreenImage) {
+                    $header.css({
+                        top: theSelfHeight() < $.Window.height() ? theSelfHeight() / 2 : $.Window.height() / 2
+                    });
+
+                    $(".fullscreen-image").css({
+                        left: -($(".fullscreen-image").width() - $.Window.width()) / 2
+                    })
                 }
                 
                 if(!isMobile || ($figure.length === 0)) {
@@ -408,16 +408,11 @@ $(function () {
                 if (!active) {
                     active = true;
                     scrollActive = $.Window.scrollTop();
-                    $.Body.triggerHandler($.Events.ABOUT);
                     $self.css({display: 'block'});
                 } else {
                     active = false;
                     $self.css({display: 'none'});
                 }
-            });
-            $.Body.bind($.Events.MODAL, function () {
-                active = false;
-                $self.css({display: 'none'});
             });
 
             $.Window.bind('scroll', function () {

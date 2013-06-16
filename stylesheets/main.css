@@ -14,6 +14,7 @@ body {
   font-weight: 100;
   color: #666;
   overflow-y: scroll;
+  min-width: 468px;
 }
 
 /* headings */
@@ -154,6 +155,9 @@ article.article-cover h2 {
 article.article-cover p {
   text-align: center;
 }
+article.article-cover i {
+  font-size: 1em;
+}
 article.article-cover hgroup h3 {
   position: absolute;
 }
@@ -173,16 +177,12 @@ article.article-cover hgroup h3.br {
   bottom: 30px;
   right: 30px;
 }
-article.article-cover .background-image {
+article.article-cover .fullscreen-image {
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-}
-article.article-cover.chapter header {
-  height: 500px;
-  margin-top: -250px;
 }
 
 /* ---------------------------------- */
@@ -258,4 +258,21 @@ summary p a:hover {
   width: 0;
   overflow: hidden;
   height: 157px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  article.article-cover h1 {
+    font-size: 8em;
+  }
+  article.article-cover i {
+    font-size: 3em;
+  }
+}
+@media (max-width: 768px) {
+  article.article-cover h1 {
+    font-size: 4em;
+  }
+  article.article-cover i {
+    font-size: 3em;
+  }
 }
