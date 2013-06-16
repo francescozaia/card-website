@@ -5,7 +5,6 @@
 }
 
 @mixin sass-box-sizing($type: "border") {
-	/* Acceptable values are border, content, and padding - content is the default W3C model */ 
 	webkit-box-sizing:	#{$type}-box;
 	-moz-box-sizing:	#{$type}-box;
 	box-sizing:			#{$type}-box;

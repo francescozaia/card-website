@@ -1,7 +1,19 @@
+/*@keyframes keyboardAnimation {
+    0%   { opacity: 0; transform:scale(0.2) translate(0, 0) }
+    100% { opacity: 1; transform: scale(1) translate(0px, 100px) }
+}
+.keyboardAnimation { animation: keyboardAnimation 1s 0s }*/
+.keyboardAnimation {
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
 body {
   font-family: Lato, sans-serif;
   font-weight: 100;
   color: #666;
+  overflow-y: scroll;
 }
 
 /* headings */
@@ -54,12 +66,20 @@ article {
 }
 article header {
   position: absolute;
+  /*
   margin: 50px 0 0 0;
   width: 300px;
   height: 200px;
   overflow: hidden;
   top: 0;
   padding: 0 0 0 10px;
+  */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
 }
 article p {
   font-family: Courier;
@@ -131,6 +151,9 @@ article.article-cover h1 {
 article.article-cover h2 {
   font-size: 6em;
 }
+article.article-cover p {
+  text-align: center;
+}
 article.article-cover hgroup h3 {
   position: absolute;
 }
@@ -149,9 +172,6 @@ article.article-cover hgroup h3.bl {
 article.article-cover hgroup h3.br {
   bottom: 30px;
   right: 30px;
-}
-article.article-cover p {
-  text-align: center;
 }
 article.article-cover .background-image {
   display: block;
@@ -208,84 +228,6 @@ summary p a {
 summary p a:hover {
   color: #999;
   border: 0 none;
-}
-
-/* ---------------------------------- */
-/* Modal */
-.modal-extras {
-  position: absolute;
-  top: 250px;
-  right: 0;
-  width: 50px;
-}
-.modal-extras a {
-  display: block;
-  color: #999;
-  text-align: left;
-  text-indent: -900px;
-  padding: 0 0;
-  width: 100%;
-  height: 50px;
-  overflow: hidden;
-  border-bottom: 1px solid #ccc;
-}
-.modal-extras a[data-camera] {
-  border: 0;
-  background: url(../images/f.png) 0 50% no-repeat;
-}
-.modal-extras a[data-location] {
-  background: url(../images/g.png) 0 50% no-repeat;
-}
-
-#modal {
-  width: 600px;
-  height: 250px;
-  padding: 0;
-  position: fixed;
-  top: 55%;
-  left: 50%;
-  z-index: 999999;
-  margin: -125px 0 0 -300px;
-  overflow: hidden;
-  display: none;
-}
-#modal .bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #111;
-  opacity: .9;
-  z-index: 1;
-}
-#modal._active {
-  display: block;
-  top: 50%;
-}
-#modal .modal-details {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  z-index: 2;
-}
-#modal .modal-details h1, #modal .modal-details h2, #modal .modal-details p {
-  text-align: center;
-  color: white;
-}
-#modal .modal-details h1, #modal .modal-details h2 {
-  font-size: 25px;
-  font-style: italic;
-  text-transform: uppercase;
-  line-height: 30px;
-}
-#modal .modal-details ul {
-  width: 500px;
-  margin: 50px 0 0 0;
-}
-#modal .modal-details ul li {
-  float: left;
-  width: 150px;
 }
 
 .footnotes {

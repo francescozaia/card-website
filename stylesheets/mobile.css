@@ -1,0 +1,19 @@
+article {
+  position: relative !important;
+}
+article .galleryList {
+  position: relative !important;
+  left: auto !important;
+  width: 100%;
+  overflow-x: scroll;
+}
+article .galleryList ul li[itemprop=photography] {
+  display: inline-block;
+  margin: 6px 10px;
+}
+article .galleryList ul li[itemprop=photography] figcaption {
+  text-align: center;
+  width: 100%;
+  display: block;
+  color: #F00;
+}

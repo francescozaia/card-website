@@ -27,7 +27,7 @@
     <div class="load-overlay" style=" ">
         <style type="text/css">
         .load-overlay { position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: #fff none; z-index: 999000; }
-        .load-overlay-center { position: absolute; width: 400px; height: 200px; top: 50%; left: 50%; margin: -100px 0 0 -200px; z-index: 99001; text-align: center; }
+        .load-overlay-center { position: absolute; width: 400px; height: 200px; margin: -100px 0 0 -200px; top: 50%; left: 50%; z-index: 99001; text-align: center; }
         </style>
         <div class="load-overlay-center">...loading...</div>
     </div>
@@ -40,9 +40,10 @@
                 <article class="article-cover" data-article="Cover">
                     <header>
                         <h1>francescozaia</h1>
-                        <div>
+                        <div class="keyboardAnimation">
                             <p style="font-size:1.5em">
-                                <i class="icon-chevron-sign-down"></i>
+                                <!-- <i class="icon-chevron-sign-down"></i> -->
+                                <i class="icon-keyboard"></i>
                             </p>
                         </div>
                     </header>
@@ -59,12 +60,7 @@
                     <header>
                         <h2>web development</h2>
                         <p>
-                        
                     </header>
-                    <div class="modal-extras" style="top: 456px;">
-                        <a href="#" data-location="Verona" data-modal-id="italy" data-year="2011"></a>
-                        <a href="#" data-camera="5D MKII" data-modal-id="canon" data-lens="50mm f/1.2"></a>
-                    </div>
                 </article>
 
                 <!-- interlude -->
@@ -91,10 +87,6 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                                 <p class="footnotes">× Camera: Yashica 124G<br>× Japan</p>
                                 <div class="numeral">No. 4</div>
-                            </div>
-                            <div class="modal-extras">
-                                <a href="#" data-location="Japan" data-modal-id="japan" data-year="2008"></a>
-                                <a href="#" data-camera="Yashica 124G" data-modal-id="yashica" data-film="Kodak Portra"></a>
                             </div>
                         </div>
                         <figure class="galleryList">
@@ -135,10 +127,6 @@
                             <p>(Luigi Ghirri)</p>
                         </blockquote>
                     </header>
-                    <div class="modal-extras" style="top: 456px;">
-                        <a href="#" data-location="Verona" data-modal-id="italy" data-year="2011"></a>
-                        <a href="#" data-camera="5D MKII" data-modal-id="canon" data-lens="50mm f/1.2"></a>
-                    </div>
                 </article>
 
                 <!-- bye -->
@@ -155,7 +143,7 @@
 
     <!-- Table of contents -->
 
-    <summary id="about" data-script="Contact">
+    <summary id="about" data-script="About">
         <h1>todo</h1>
         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
         <h2>author</h2>
@@ -164,26 +152,22 @@
         <p>(social)</p>
     </summary>
 
-    <!-- Modal -->
-    <div id="modal" data-script="Modal">
-      <div class="bg"></div>
-      <div class="modal-details"></div>
-    </div>
-
     <!-- scripts -->
-    <!--<script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>-->
     <!--<script src="./scripts/objects/new_article.js"></script>-->
-    <script src="./scripts/libs/instafeed.min.js"></script>
     <script src="./scripts/init.js"></script>
+    <!--
+    <script src="./scripts/libs/instafeed.min.js"></script>
     <script type="text/javascript">
     var feed = new Instafeed({
         get: 'tagged',
-        tagName: 'bologna',
+        tagName: 'pigneto',
+        limit: 60,
         clientId: '13d1de52b990407382f7424a178e42e8',
         template: '<a href="{{link}}"><img width="100" height="100" src="{{image}}" /></a>'
     });
     feed.run();
-</script>
+    </script>
+    -->
 
 </body>
 </html>
