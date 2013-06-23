@@ -6,7 +6,7 @@ yepnope([{
         if (!window.jQuery) yepnope('./scripts/libs/jquery-2.0.2.min.js');
     }
 }, {
-    load: ["./scripts/setup.js"],
+    load: ["./scripts/setup.js", "./scripts/libs/d3.v3.min.js", "./scripts/d3setup.js"],
     complete: function () {
         $.Android = (navigator.userAgent.match(/Android/i));
         $.iDevices = ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i)));

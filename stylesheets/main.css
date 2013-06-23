@@ -3,10 +3,14 @@
     100% { opacity: 1; transform: scale(1) translate(0px, 100px) }
 }
 .keyboardAnimation { animation: keyboardAnimation 1s 0s }*/
-.keyboardAnimation {
+.keyboard-animation, .text-animation {
   -webkit-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
+}
+
+.keyboard-animation, .text-animation {
+  opacity: 0;
 }
 
 body {
@@ -80,7 +84,7 @@ article header {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 80%;
+  /*height: 80%;*/
 }
 article p {
   font-family: Courier;
@@ -89,7 +93,38 @@ article p {
   color: #777;
   font-size: 11px;
 }
-article figure {
+article.gallery {
+  background-color: #EFEADD;
+}
+article.gallery header {
+  position: relative;
+}
+article.gallery h1 {
+  margin: 2em;
+}
+article.gallery .gallery-description {
+  margin: 0 0 0 50px;
+  padding: 0 0 0 0;
+}
+article.gallery .gallery-description-text {
+  padding-left: 100px;
+}
+article.gallery .gallery-description-text p {
+  width: 200px;
+}
+article.gallery .gallery-description-text .footnotes {
+  margin: 50px 0 0 0;
+}
+article.gallery .gallery-description-text .numeral {
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  line-height: 10px;
+  padding: 5px;
+  border-bottom: 5px solid #444;
+  text-align: center;
+}
+article.gallery figure.gallery-list {
   background: transparent;
   position: fixed;
   top: 250px;
@@ -98,7 +133,7 @@ article figure {
   margin: 0;
   padding: 0;
 }
-article figure ul {
+article.gallery figure.gallery-list ul {
   list-style-type: none;
   display: block;
   margin: 0;
@@ -106,27 +141,50 @@ article figure ul {
   width: auto;
   white-space: nowrap;
 }
-article figure img {
+article.gallery figure.gallery-list ul li[itemprop=photography] img {
   display: block;
+  -webkit-filter: grayscale(60%);
+  -moz-filter: grayscale(60%);
+  filter: grayscale(60%);
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
-article figure figcaption {
+article.gallery figure.gallery-list ul li[itemprop=photography]:hover img {
+  -webkit-filter: none;
+  -moz-filter: none;
+  filter: none;
+}
+article.gallery figure.gallery-list ul li[itemprop=photography] figcaption {
   margin-top: -20px;
+  height: 20px;
+  line-height: 20px;
+  position: relative;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
 }
-article .numeral {
-  position: absolute;
-  top: 250px;
-  left: 50px;
-  font-size: 15px;
-  line-height: 10px;
-  padding: 5px;
-  border-bottom: 2px solid #444;
+article.gallery figure.gallery-list ul li[itemprop=photography] figcaption .caption-text {
+  position: relative;
+  color: #222;
+  z-index: 5;
   text-align: center;
+  font-family: Courier, sans-serif;
+  font-size: 12px;
+  text-shadow: 1px 1px 2px #FFF;
 }
-article.gallery {
-  background-color: #EFEADD;
-}
-article.gallery img {
-  border: 1px solid #FFF;
+article.gallery figure.gallery-list ul li[itemprop=photography] figcaption .caption-background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  z-index: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  opacity: .5;
 }
 article.article-cover {
   background: #f2f2f2;
@@ -183,6 +241,14 @@ article.article-cover .fullscreen-image {
   top: 0;
   left: 0;
   height: 100%;
+  opacity: .7;
+  filter: alpha(opacity=70);
+}
+article blockquote em {
+  text-shadow: 1px 1px 2px #DDD;
+  color: #444;
+  font-size: 2em;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 /* ---------------------------------- */
@@ -230,34 +296,13 @@ summary p a:hover {
   border: 0 none;
 }
 
-.footnotes {
-  margin: 50px 0 0 0;
-}
-
-.column {
-  margin: 0 0 0 50px;
-  padding: 0 0 0 0;
-}
-
-.text {
-  margin: 250px 0 0 0;
-  padding: 0 0 0 100px;
-}
-.text p {
-  width: 200px;
-}
-
 #interlude-pioneer header {
   position: relative;
 }
 
 #interlude-pioneer-craft {
-  position: absolute;
-  left: 353px;
-  top: 1px;
-  width: 0;
-  overflow: hidden;
-  height: 157px;
+  width: 960px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

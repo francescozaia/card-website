@@ -23,11 +23,10 @@
 
 </head>
 <body>
-    
     <div class="load-overlay" style=" ">
         <style type="text/css">
-        .load-overlay { position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: #fff none; z-index: 999000; }
-        .load-overlay-center { position: absolute; width: 400px; height: 200px; margin: -100px 0 0 -200px; top: 50%; left: 50%; z-index: 99001; text-align: center; }
+            .load-overlay { position: fixed; width: 100%; height: 100%; top: 0; left: 0; background: #fff none; z-index: 999000; }
+            .load-overlay-center { position: absolute; width: 400px; height: 200px; margin: -100px 0 0 -200px; top: 50%; left: 50%; z-index: 99001; text-align: center; }
         </style>
         <div class="load-overlay-center">...loading...</div>
     </div>
@@ -40,23 +39,85 @@
                 <article class="article-cover" data-article="Cover">
                     <header>
                         <h1>francescozaia</h1>
-                        <div class="keyboardAnimation">
+                        <p>focus / composition</p>
+                        <p>as a <a href="#photography" class="section-photography">photographer</a>, I...</p>
+                        <p>as a <a href="#webdevelopment" class="section-webdevelopment">web developer</a>, I...</p>
+                        <div class="keyboard-animation">
                             <p style="font-size:1.5em">
-                                <!-- <i class="icon-chevron-sign-down"></i> -->
                                 <i class="icon-keyboard"></i>
                             </p>
                         </div>
+                        <div class="text-animation">
+                            <p>use arrows (<i class="icon-chevron-down"></i> <i class="icon-chevron-up"></i>) or scroll down to navigate</p>
+                            <p>use ESC key to contact me</p>
+                        </div>
                     </header>
                     <hgroup>
-                        <h3 class="bl"><i class="icon-camera-retro"></i></h3>
-                        <h3 class="br"><i class="icon-code-fork"></i></h3>
+                        <h3 class="bl"><a href="#photography" class="section-photography"><i class="icon-camera-retro"></i></a></h3>
+                        <h3 class="br"><a href="#webdevelopment" class="section-webdevelopment"><i class="icon-code-fork"></i></a></h3>
                     </hgroup>
                 </article>
 
                 <!-- photography -->
 
+                <article class="article-cover with-fullscreen-image" data-height="600" data-article="Chapter 2">
+                    <img src="http://farm7.staticflickr.com/6162/6251107652_7364d3d430_b.jpg" class="fullscreen-image" alt=""></p>
+                    <header>
+                        <blockquote>
+                            <p><em>"Certuni vanno in viaggio e guardano solo quello che gli hanno detto di guardare altrimenti si sentono persi. Ma io mi chiedo: è meglio sentirsi persi o guardare solo quello che ti hanno detto di guardare?"</em></p>
+                            <p><em>"Some people go traveling and only look at what they told them to look otherwise they feel lost. But I wonder: is it better to feel lost or watching only what they told you to look?"</em></p>
+                            <p>(Luigi Ghirri)</p>
+                        </blockquote>
+                    </header>
+                </article>
+
+                <!-- project -->
+
+                <article class="gallery">
+                    <div class="interior">
+                        <div class="gallery-description">
+                            <header>
+                                <h1>Alfonsine (Ravenna)</h1>
+                            </header>
+                            <div class="gallery-description-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                <p class="footnotes">× Camera: Yashica 124G<br>× Japan</p>
+                                <div class="numeral">Jun 2012</div>
+                            </div>
+                        </div>
+                        <figure id="test" class="gallery-list">
+                            <ul>
+                                <li itemprop="photography">
+                                    <img src="http://farm9.staticflickr.com/8426/7496634468_2575c1a9fb_z.jpg" alt="">
+                                    <figcaption>
+                                        <div class="caption-text">Background should grow to fit.</div>
+                                        <div class="caption-background"></div>
+                                    </figcaption>
+                                </li>
+                                <li itemprop="photography">
+                                    <img src="http://farm9.staticflickr.com/8001/7496636268_b9e78b1d3a_z.jpg" alt="">
+                                </li>
+                                <li itemprop="photography">
+                                    <img src="http://farm8.staticflickr.com/7263/7496639286_070b6f6de2_z.jpg" alt="">
+                                </li>
+                                <li itemprop="photography">
+                                    <img src="http://farm8.staticflickr.com/7260/7496641506_375f92cc61_z.jpg" alt="">
+                                </li>
+                                <li itemprop="photography">
+                                    <img src="http://farm9.staticflickr.com/8294/7496644700_9a01934ac1_z.jpg" alt="">
+                                </li>
+                            </ul>
+                        </figure>
+                    </div>
+                </article>
+
+                
+				
+				<!-- photography -->
+
                 <article class="article-cover with-fullscreen-image" data-height="683" data-article="Chapter 1">
                     <img src="http://farm7.staticflickr.com/6120/6390809851_c2d6e346fc_b.jpg" class="fullscreen-image" alt=""></p>
+                    <!-- <img src="./images/procione.png"  alt=""></p> -->
                     <header>
                         <h2>web development</h2>
                         <p>
@@ -67,66 +128,12 @@
 
                 <article class="article-cover interlude" id="interlude-pioneer" data-article="Interlude 1">
                     <header>
-                        <img src="./images/pioneer_planets.png" alt="">
+                        <!-- <img src="./images/pioneer_planets.png" alt=""> -->
                         <div id="interlude-pioneer-craft">
-                            <img src="./images/pioneer_craft.png" alt="">
+                            <!-- <img src="./images/pioneer_craft.png" alt=""> -->
                         </div>
                     </header>
                     <!-- <figure style="height: 400px; margin-top: -425px;"></figure> -->
-                </article>
-
-                <!-- project -->
-
-                <article data-article="Japan" class="gallery">
-                    <div class="interior">
-                        <div class="column">
-                            <header>
-                                <h1>progetto</h1>
-                            </header>
-                            <div class="text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                <p class="footnotes">× Camera: Yashica 124G<br>× Japan</p>
-                                <div class="numeral">No. 4</div>
-                            </div>
-                        </div>
-                        <figure class="galleryList">
-                            <ul>
-                                <li itemprop="photography">
-                                    <img src="http://farm9.staticflickr.com/8426/7496634468_2575c1a9fb_z.jpg" height="427" alt="">
-                                    <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
-                                </li>
-                                <li itemprop="photography">
-                                    <img src="http://farm9.staticflickr.com/8001/7496636268_b9e78b1d3a_z.jpg" height="427" alt="">
-                                    <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
-                                </li>
-                                <li itemprop="photography">
-                                    <img src="http://farm8.staticflickr.com/7263/7496639286_070b6f6de2_z.jpg" height="427" alt="">
-                                    <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
-                                </li>
-                                <li itemprop="photography">
-                                    <img src="http://farm8.staticflickr.com/7260/7496641506_375f92cc61_z.jpg" height="427" alt="">
-                                    <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
-                                </li>
-                                <li itemprop="photography">
-                                    <img src="http://farm9.staticflickr.com/8294/7496644700_9a01934ac1_z.jpg" height="427" alt="">
-                                    <figcaption>Test Title <span itemprop="description">Desc</span></figcaption>
-                                </li>
-                            </ul>
-                        </figure>
-                    </div>
-                </article>
-
-                <!-- photography -->
-
-                <article class="article-cover with-fullscreen-image" data-height="600" data-article="Chapter 2">
-                    <img src="http://farm7.staticflickr.com/6162/6251107652_7364d3d430_b.jpg" class="fullscreen-image" alt=""></p>
-                    <header>
-                        <blockquote>
-                            <p><em>"Certuni vanno in viaggio e guardano solo quello che gli hanno detto di guardare altrimenti si sentono persi. Ma io mi chiedo: è meglio sentirsi persi o guardare solo quello che ti hanno detto di guardare?"</em></p>
-                            <p><em>"Some people go traveling and only look at what they told him to look otherwise they feel lost. But I wonder: is it better to feel lost or watching only what they told you to look"</em></p>
-                            <p>(Luigi Ghirri)</p>
-                        </blockquote>
-                    </header>
                 </article>
 
                 <!-- bye -->

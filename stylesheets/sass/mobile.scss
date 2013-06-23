@@ -1,18 +1,35 @@
 article {
 	position: relative !important;
-	.galleryList {
-		position:relative !important;
-		left:auto !important;
-		width: 100%;
-		overflow-x: scroll;
-		ul li[itemprop=photography] {
-			display: inline-block;
-			margin: 6px 10px;
-			figcaption {
-				text-align: center;
-				width: 100%;
-				display: block;
-				color: #F00;
+	&.gallery {
+		.gallery-description-text {
+			p {
+                width: auto;
+            }
+		}
+		figure.gallery-list {
+			top: 0px;
+			position:relative !important;
+			left:auto !important;
+			width: 100%;
+			/*overflow-x: scroll;
+			min-height: 0px;
+			ul li[itemprop=photography] {
+				display: inline-block;
+				margin: 6px 10px;
+				figcaption {
+					text-align: center;
+					width: 100%;
+					display: block;
+					color: #F00;
+				}
+			}*/
+			ul {
+				li[itemprop=photography] {
+					margin-top:20px;
+					img {
+						width: 100%;
+					}
+				}
 			}
 		}
 	}

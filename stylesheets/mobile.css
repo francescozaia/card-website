@@ -1,19 +1,30 @@
 article {
   position: relative !important;
 }
-article .galleryList {
+article.gallery .gallery-description-text p {
+  width: auto;
+}
+article.gallery figure.gallery-list {
+  top: 0px;
   position: relative !important;
   left: auto !important;
   width: 100%;
-  overflow-x: scroll;
+  /*overflow-x: scroll;
+  min-height: 0px;
+  ul li[itemprop=photography] {
+  	display: inline-block;
+  	margin: 6px 10px;
+  	figcaption {
+  		text-align: center;
+  		width: 100%;
+  		display: block;
+  		color: #F00;
+  	}
+  }*/
 }
-article .galleryList ul li[itemprop=photography] {
-  display: inline-block;
-  margin: 6px 10px;
+article.gallery figure.gallery-list ul li[itemprop=photography] {
+  margin-top: 20px;
 }
-article .galleryList ul li[itemprop=photography] figcaption {
-  text-align: center;
+article.gallery figure.gallery-list ul li[itemprop=photography] img {
   width: 100%;
-  display: block;
-  color: #F00;
 }
