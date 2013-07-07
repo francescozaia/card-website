@@ -256,7 +256,11 @@ $(function () {
                     if (!$self.hasClass('_inview')) {
                         $self.addClass('_inview');
                         if ($self.hasClass('interlude')) {
-                            D3()
+                            //D3();
+                            if ($("#interlude-pioneer-craft").find("svg").length === 0) {
+                                var pippo = new PieAnimation();
+                                pippo.createPie();
+                            }
                         }
                     }
                     return (sTop >= location.min + figureHeight) ? "page" : "inview";
