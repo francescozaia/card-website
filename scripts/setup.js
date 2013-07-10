@@ -256,11 +256,7 @@ $(function () {
                     if (!$self.hasClass('_inview')) {
                         $self.addClass('_inview');
                         if ($self.hasClass('interlude')) {
-                            //D3();
-                            if ($("#interlude-pioneer-craft").find("svg").length === 0) {
-                                var pippo = new PieAnimation();
-                                pippo.createPie();
-                            }
+                            
                         }
                     }
                     return (sTop >= location.min + figureHeight) ? "page" : "inview";
@@ -413,7 +409,15 @@ $(function () {
                     active = true;
                     scrollActive = $.Window.scrollTop();
                     $self.css({display: 'block'});
+                    //D3();
+                    if ($("#pie").find("svg").length === 0) {
+                        var pippo = new PieAnimation();
+                        pippo.createPie("#pie");
+                    }
                 } else {
+                    if ($("#pie").find("svg").length === 1) {
+                        $("#pie").find("svg").remove();
+                    }
                     active = false;
                     $self.css({display: 'none'});
                 }

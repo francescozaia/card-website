@@ -258,12 +258,12 @@ summary {
   top: 50%;
   left: 50%;
   background: #000;
-  width: 400px;
-  height: 400px;
-  z-index: 999999;
+  width: 640px;
+  height: 480px;
+  z-index: 9999;
   display: none;
-  padding: 25px 50px 50px 50px;
-  margin: -250px 0 0 -250px;
+  padding: 24px 32px 24px 32px;
+  margin: -240px 0 0 -320px;
   opacity: .9;
 }
 summary h1, summary h2, summary p {
@@ -295,14 +295,114 @@ summary p a:hover {
   color: #999;
   border: 0 none;
 }
-
-#interlude-pioneer header {
-  position: relative;
-}
-
-#interlude-pioneer-craft {
-  width: 960px;
+summary #pie {
+  width: 400px;
+  height: 300px;
   margin: 0 auto;
+  /* SKILLS */
+  /*hide the text and circles for all nodes greater than zero */
+}
+summary #pie path.arc {
+  cursor: move;
+  fill: #fff;
+}
+summary #pie .node {
+  font-size: 10px;
+}
+summary #pie .node:hover {
+  fill: #1f77b4;
+}
+summary #pie .link {
+  fill: none;
+  stroke: #1f77b4;
+  stroke-opacity: .4;
+  pointer-events: none;
+}
+summary #pie .link.source, summary #pie .link.target {
+  stroke-opacity: 1;
+  stroke-width: 2px;
+}
+summary #pie .node.target {
+  fill: #d62728 !important;
+}
+summary #pie .link.source {
+  stroke: #d62728;
+}
+summary #pie .node.source {
+  fill: #2ca02c;
+}
+summary #pie .link.target {
+  stroke: #2ca02c;
+}
+summary #pie #skillsTitle {
+  position: absolute;
+}
+summary #pie #skills_svg_container {
+  text-align: right;
+}
+summary #pie #skills_svg_container circle {
+  fill: #1f77b4;
+  fill-opacity: .25;
+  stroke: #1f77b4;
+  stroke-width: 1px;
+}
+summary #pie #skills_svg_container .node3 circle {
+  fill: #b2df90;
+  fill-opacity: 1;
+}
+summary #pie #skills_svg_container .node3.down circle, summary #pie #skills_svg_container .node2.down circle {
+  fill: #ff00f0;
+  fill-opacity: 1;
+}
+summary #pie #skills_svg_container text {
+  font-size: 7px;
+}
+summary #pie #skills_svg_container .node3.down text {
+  font-size: 9px;
+  fill: #fff;
+}
+summary #pie #skills_svg_container .node2.down text {
+  font-size: 9px;
+  fill: #fff;
+}
+summary #pie #skills_svg_container .node1 text {
+  font-size: 11px;
+  text-transform: uppercase;
+  fill: #195482;
+}
+summary #pie #skills_svg_container .node2 text {
+  font-size: 9px;
+  fill: #195482;
+}
+summary #pie #skills_svg_container .node3 text {
+  fill: #216325;
+}
+summary #pie #skills_svg_container .node1.active text {
+  visibility: hidden;
+}
+summary #pie #skills_svg_container .node2.open text, summary #pie .node2.open circle {
+  visibility: visible !important;
+}
+summary #pie #skills_svg_container .node2.open.opened text {
+  visibility: hidden !important;
+}
+summary #pie #skills_svg_container .node2.active text {
+  visibility: hidden !important;
+}
+summary #pie #skills_svg_container .node3.open text, summary #pie .node3.open circle {
+  visibility: visible !important;
+}
+summary #pie #skills_svg_container .node3.open.disabled text, summary #pie .node3.open.disabled circle {
+  visibility: hidden !important;
+}
+summary #pie #skills_svg_container .node3.notext text {
+  visibility: hidden !important;
+}
+summary #pie #skills_svg_container .node3.active text {
+  visibility: visible !important;
+}
+summary #pie #skills_svg_container [class^=node]:not(.node1):not(.node0) text, summary #pie [class^=node]:not(.node1):not(.node0) circle {
+  visibility: hidden;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

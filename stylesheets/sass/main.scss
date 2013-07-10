@@ -263,12 +263,12 @@ summary {
     top: 50%;
     left: 50%;
     background: #000;
-    width: 400px;
-    height: 400px;
-    z-index: 999999;
+    width: 640px;
+    height: 480px;
+    z-index: 9999;
     display: none;
-    padding: 25px 50px 50px 50px;
-    margin: -250px 0 0 -250px;
+    padding: 24px 32px 24px 32px;
+    margin: -240px 0 0 -320px;
     opacity: .9;
     h1, h2, p {
         text-align: center; color: #fff;
@@ -291,18 +291,100 @@ summary {
             }
         }
     }
+    #pie {
+        width:400px;
+        height: 300px;
+        margin:0 auto;
+
+        path.arc {
+  cursor: move;
+  fill: #fff;
+}
+
+.node {
+  font-size: 10px;
+}
+
+.node:hover {
+  fill: #1f77b4;
+}
+
+.link {
+  fill: none;
+  stroke: #1f77b4;
+  stroke-opacity: .4;
+  pointer-events: none;
+}
+
+.link.source, .link.target {
+  stroke-opacity: 1;
+  stroke-width: 2px;
+}
+
+.node.target {
+  fill: #d62728 !important;
+}
+
+.link.source {
+  stroke: #d62728;
+}
+
+.node.source {
+  fill: #2ca02c;
+}
+
+.link.target {
+  stroke: #2ca02c;
+}
+
+/* SKILLS */
+
+#skillsTitle { position:absolute; }
+#skills_svg_container { text-align:right; }
+#skills_svg_container circle {
+  fill: rgb(31, 119, 180);
+  fill-opacity: .25;
+  stroke: rgb(31, 119, 180);
+  stroke-width: 1px;
+}
+
+
+#skills_svg_container .node3 circle {
+  fill: rgb(178, 223, 144);
+  fill-opacity: 1;
+}
+
+#skills_svg_container .node3.down circle, #skills_svg_container .node2.down circle {
+  fill: rgb(255,0,240);
+  fill-opacity: 1;
 }
 
 
 
-
-#interlude-pioneer header {
-    position: relative;
+#skills_svg_container text {
+  font-size: 7px;
 }
 
-#interlude-pioneer-craft {
-    width:960px;
-    margin:0 auto;
+#skills_svg_container .node3.down text { font-size: 9px; fill:#fff; }
+#skills_svg_container .node2.down text { font-size: 9px; fill:#fff; }
+
+#skills_svg_container  .node1 text { font-size:11px; text-transform: uppercase; fill: #195482; }
+#skills_svg_container  .node2 text { font-size:9px; fill: #195482; }
+#skills_svg_container  .node3 text { fill: #216325; }
+
+#skills_svg_container  .node1.active text { visibility: hidden; }
+#skills_svg_container  .node2.open text, .node2.open circle { visibility: visible !important; }
+#skills_svg_container  .node2.open.opened text { visibility: hidden !important; }
+#skills_svg_container  .node2.active text { visibility: hidden !important; }
+#skills_svg_container  .node3.open text, .node3.open circle { visibility: visible !important; }
+#skills_svg_container  .node3.open.disabled text, .node3.open.disabled circle { visibility: hidden !important; }
+#skills_svg_container  .node3.notext text { visibility: hidden !important; }
+#skills_svg_container  .node3.active text { visibility: visible !important; }
+
+
+#skills_svg_container [class^=node]:not(.node1):not(.node0) text, [class^=node]:not(.node1):not(.node0) circle { visibility: hidden; }  /*hide the text and circles for all nodes greater than zero */
+
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
