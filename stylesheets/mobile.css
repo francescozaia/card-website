@@ -13,6 +13,7 @@ article.gallery figure.gallery-list {
   position: relative !important;
   left: auto !important;
   width: 100%;
+  /*test*/
 }
 article.gallery figure.gallery-list ul li[itemprop=photography] {
   margin-top: 20px;
